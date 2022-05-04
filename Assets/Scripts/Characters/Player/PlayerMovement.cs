@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask wallLayerMask;
     [SerializeField] private LayerMask actorLayerMask;
 
-    private float moveX, moveY;
+    public float MoveX { get; private set; }
+    public float MoveY { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Set direction vector for player movement
-        Vector3 dir = new Vector2(moveX, moveY).normalized * Speed * Time.fixedDeltaTime;
+        Vector3 dir = new Vector2(MoveX, MoveY).normalized * Speed * Time.fixedDeltaTime;
 
         // Get next position
         Vector2 newPosition = transform.position + dir;
@@ -54,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
         // Value ranges between -1 and 1
         // -1    => left, down
         // 1     => right, up
-        moveX = moveVector.x;
-        moveY = moveVector.y;
+        MoveX = moveVector.x;
+        MoveY = moveVector.y;
     }
 
     // Converts given bitmask to layer number

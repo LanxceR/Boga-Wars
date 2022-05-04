@@ -28,52 +28,52 @@ TextureImporter:
     second: Lemper-Idle-R 1
   - first:
       213: 9079503707721219609
-    second: Player-Lemper-spritesheet_8
+    second: Lemper-Run-F 0
   - first:
       213: -1582550993294842780
-    second: Player-Lemper-spritesheet_9
+    second: Lemper-Run-F 1
   - first:
       213: -4577971928611091785
-    second: Player-Lemper-spritesheet_10
+    second: Lemper-Run-F 2
   - first:
       213: -3564564669832460513
-    second: Player-Lemper-spritesheet_11
+    second: Lemper-Run-F 3
   - first:
       213: -6184656676214799761
-    second: Player-Lemper-spritesheet_12
+    second: Lemper-Run-L 0
   - first:
       213: -9140520399806545086
-    second: Player-Lemper-spritesheet_13
+    second: Lemper-Run-L 1
   - first:
       213: -7266401756869769025
-    second: Player-Lemper-spritesheet_14
+    second: Lemper-Run-L 2
   - first:
       213: 7636966108165829646
-    second: Player-Lemper-spritesheet_15
+    second: Lemper-Run-L 3
   - first:
       213: 8221972759950231242
-    second: Player-Lemper-spritesheet_16
+    second: Lemper-Run-B 0
   - first:
       213: 3416818308787453528
-    second: Player-Lemper-spritesheet_17
+    second: Lemper-Run-B 1
   - first:
       213: 1573064951042820052
-    second: Player-Lemper-spritesheet_18
+    second: Lemper-Run-B 2
   - first:
       213: -1550503062580105585
-    second: Player-Lemper-spritesheet_19
+    second: Lemper-Run-B 3
   - first:
       213: -7729619440396279285
-    second: Player-Lemper-spritesheet_20
+    second: Lemper-Run-R 0
   - first:
       213: 528705957476307456
-    second: Player-Lemper-spritesheet_21
+    second: Lemper-Run-R 1
   - first:
       213: -7676653906864667369
-    second: Player-Lemper-spritesheet_22
+    second: Lemper-Run-R 2
   - first:
       213: -4052713038552933047
-    second: Player-Lemper-spritesheet_23
+    second: Lemper-Run-R 3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -343,7 +343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_8
+      name: Lemper-Run-F 0
       rect:
         serializedVersion: 2
         x: 0
@@ -364,7 +364,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_9
+      name: Lemper-Run-F 1
       rect:
         serializedVersion: 2
         x: 32
@@ -385,7 +385,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_10
+      name: Lemper-Run-F 2
       rect:
         serializedVersion: 2
         x: 64
@@ -406,7 +406,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_11
+      name: Lemper-Run-F 3
       rect:
         serializedVersion: 2
         x: 96
@@ -427,7 +427,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_12
+      name: Lemper-Run-L 0
       rect:
         serializedVersion: 2
         x: 0
@@ -448,7 +448,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_13
+      name: Lemper-Run-L 1
       rect:
         serializedVersion: 2
         x: 32
@@ -469,7 +469,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_14
+      name: Lemper-Run-L 2
       rect:
         serializedVersion: 2
         x: 64
@@ -490,7 +490,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_15
+      name: Lemper-Run-L 3
       rect:
         serializedVersion: 2
         x: 96
@@ -511,7 +511,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_16
+      name: Lemper-Run-B 0
       rect:
         serializedVersion: 2
         x: 0
@@ -532,7 +532,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_17
+      name: Lemper-Run-B 1
       rect:
         serializedVersion: 2
         x: 32
@@ -553,7 +553,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_18
+      name: Lemper-Run-B 2
       rect:
         serializedVersion: 2
         x: 64
@@ -574,7 +574,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_19
+      name: Lemper-Run-B 3
       rect:
         serializedVersion: 2
         x: 96
@@ -595,7 +595,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_20
+      name: Lemper-Run-R 0
       rect:
         serializedVersion: 2
         x: 0
@@ -616,7 +616,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_21
+      name: Lemper-Run-R 1
       rect:
         serializedVersion: 2
         x: 32
@@ -637,7 +637,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_22
+      name: Lemper-Run-R 2
       rect:
         serializedVersion: 2
         x: 64
@@ -658,7 +658,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-Lemper-spritesheet_23
+      name: Lemper-Run-R 3
       rect:
         serializedVersion: 2
         x: 96

@@ -6,12 +6,11 @@ using UnityEngine.InputSystem;
 public class WeaponAim : MonoBehaviour
 {
     private Vector2 mousePosition;
-    private Camera camera;
 
     // Start is called before the first frame update
     void Start()
     {
-        camera = FindObjectOfType<Camera>();
+
     }
 
     // Update is called once per frame
@@ -37,7 +36,7 @@ public class WeaponAim : MonoBehaviour
         mousePosition = moveValue.Get<Vector2>();
 
         // Translate screen position to world position
-        Vector2 worldPos = camera.ScreenToWorldPoint(mousePosition);
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePosition);
 
         // Rotate weapon parent
         transform.up = new Vector3(worldPos.x - transform.position.x, worldPos.y - transform.position.y);
