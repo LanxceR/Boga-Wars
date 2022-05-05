@@ -30,6 +30,7 @@ public class LookAtMouse : MonoBehaviour
         }
     }
 
+    // OnLook listener from InputAction "PlayerInput.inputaction"
     void OnLook(InputValue moveValue)
     {
         // Get mouse position on screen

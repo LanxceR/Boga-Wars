@@ -9,9 +9,7 @@ public class Projectile : MonoBehaviour
     private Vector2 startingPosition;
     private float range = 5f;
     private bool hit;
-
-    [Header("Main Settings")]
-    [SerializeField] private float damage = 1f;
+    private float damage = 1f;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -48,6 +46,16 @@ public class Projectile : MonoBehaviour
     public void SetRange(float range)
     {
         this.range = range;
+    }
+
+    public void SetDamage(float damage)
+    {
+        this.damage = damage;
+    }
+
+    public void SetVelocity(float velocity)
+    {
+        movement.Speed = velocity;
     }
 
     // Check if projectile had travelled its range distance

@@ -19,6 +19,7 @@ public class Rotate : MonoBehaviour
     [SerializeField] private bool constrainRotation = false;
     [SerializeField] private float frequency = 0.5f;
     [SerializeField] private float maxRotation = 45f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,10 +65,10 @@ public class Rotate : MonoBehaviour
         maxRotation *= -1;
     }
 
-    // Reset rotation back to default
+    // Reset rotation back to identity
     public void ResetRotation()
     {
-        transform.rotation = defaultRotation;
+        transform.rotation = Quaternion.identity;
     }
 
     // Stop rotation
