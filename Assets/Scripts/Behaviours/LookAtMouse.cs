@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class WeaponAim : MonoBehaviour
+public class LookAtMouse : MonoBehaviour
 {
     private Vector2 mousePosition;
 

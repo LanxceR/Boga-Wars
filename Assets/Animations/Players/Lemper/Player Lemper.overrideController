@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player Lemper
+  m_Controller: {fileID: 9100000, guid: 4c89b37f50b22c4469e3d3969c175211, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3096509e32baf384ea5f1fad30d4221c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3096509e32baf384ea5f1fad30d4221c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f72efbe5973143440ab10fad28477329, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f72efbe5973143440ab10fad28477329, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a761bde9470fceb46b0a8848ab7539a0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a761bde9470fceb46b0a8848ab7539a0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f454aa0afdc75b84ba39a1b65ab25f49, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f454aa0afdc75b84ba39a1b65ab25f49, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c130de0cc72a91041bfa1aa8790a449d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c130de0cc72a91041bfa1aa8790a449d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a853fac39cbc7214d99d7ed68f200d43, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a853fac39cbc7214d99d7ed68f200d43, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 01bf2ebddc78a9a4586b7c3514e03069, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 01bf2ebddc78a9a4586b7c3514e03069, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fdfb1d09a7560cb4f9e6e9ae19acffa8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fdfb1d09a7560cb4f9e6e9ae19acffa8, type: 2}

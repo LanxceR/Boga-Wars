@@ -9,7 +9,7 @@ public enum PlayerState
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
-    private WeaponAim weapon;
+    private LookAtMouse weapon;
     private PlayerMovement playerMove;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
         anim = GetComponent<Animator>();
 
         playerMove = GetComponent<PlayerMovement>();
-        weapon = GetComponentInChildren<WeaponAim>();
+        weapon = GetComponentInChildren<LookAtMouse>();
     }
 
     // Update is called once per frame
