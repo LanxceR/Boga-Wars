@@ -4,76 +4,76 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 3164118794083103931
-    second: Lemper-Idle-F 0
+    second: Player-Lemper-spritesheet_0
   - first:
       213: 7911329403659075251
-    second: Lemper-Idle-F 1
+    second: Player-Lemper-spritesheet_1
   - first:
       213: -8351516904245105631
-    second: Lemper-Idle-L 0
+    second: Player-Lemper-spritesheet_2
   - first:
       213: -5800501493854557092
-    second: Lemper-Idle-L 1
+    second: Player-Lemper-spritesheet_3
   - first:
       213: 6961666305685367570
-    second: Lemper-Idle-B 0
+    second: Player-Lemper-spritesheet_4
   - first:
       213: -6856015308903790031
-    second: Lemper-Idle-B 1
+    second: Player-Lemper-spritesheet_5
   - first:
       213: -2063404491094812775
-    second: Lemper-Idle-R 0
+    second: Player-Lemper-spritesheet_6
   - first:
       213: -3481971973813140122
-    second: Lemper-Idle-R 1
+    second: Player-Lemper-spritesheet_7
   - first:
       213: 9079503707721219609
-    second: Lemper-Run-F 0
+    second: Player-Lemper-spritesheet_8
   - first:
       213: -1582550993294842780
-    second: Lemper-Run-F 1
+    second: Player-Lemper-spritesheet_9
   - first:
       213: -4577971928611091785
-    second: Lemper-Run-F 2
+    second: Player-Lemper-spritesheet_10
   - first:
       213: -3564564669832460513
-    second: Lemper-Run-F 3
+    second: Player-Lemper-spritesheet_11
   - first:
       213: -6184656676214799761
-    second: Lemper-Run-L 0
+    second: Player-Lemper-spritesheet_12
   - first:
       213: -9140520399806545086
-    second: Lemper-Run-L 1
+    second: Player-Lemper-spritesheet_13
   - first:
       213: -7266401756869769025
-    second: Lemper-Run-L 2
+    second: Player-Lemper-spritesheet_14
   - first:
       213: 7636966108165829646
-    second: Lemper-Run-L 3
+    second: Player-Lemper-spritesheet_15
   - first:
       213: 8221972759950231242
-    second: Lemper-Run-B 0
+    second: Player-Lemper-spritesheet_16
   - first:
       213: 3416818308787453528
-    second: Lemper-Run-B 1
+    second: Player-Lemper-spritesheet_17
   - first:
       213: 1573064951042820052
-    second: Lemper-Run-B 2
+    second: Player-Lemper-spritesheet_18
   - first:
       213: -1550503062580105585
-    second: Lemper-Run-B 3
+    second: Player-Lemper-spritesheet_19
   - first:
       213: -7729619440396279285
-    second: Lemper-Run-R 0
+    second: Player-Lemper-spritesheet_20
   - first:
       213: 528705957476307456
-    second: Lemper-Run-R 1
+    second: Player-Lemper-spritesheet_21
   - first:
       213: -7676653906864667369
-    second: Lemper-Run-R 2
+    second: Player-Lemper-spritesheet_22
   - first:
       213: -4052713038552933047
-    second: Lemper-Run-R 3
+    second: Player-Lemper-spritesheet_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -175,15 +175,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lemper-Idle-F 0
+      name: Player-Lemper-spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 224
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,15 +196,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-F 1
+      name: Player-Lemper-spritesheet_1
       rect:
         serializedVersion: 2
         x: 32
         y: 224
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,15 +217,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-L 0
+      name: Player-Lemper-spritesheet_2
       rect:
         serializedVersion: 2
         x: 0
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,15 +238,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-L 1
+      name: Player-Lemper-spritesheet_3
       rect:
         serializedVersion: 2
         x: 32
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,15 +259,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-B 0
+      name: Player-Lemper-spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,15 +280,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-B 1
+      name: Player-Lemper-spritesheet_5
       rect:
         serializedVersion: 2
         x: 32
         y: 160
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,15 +301,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-R 0
+      name: Player-Lemper-spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,15 +322,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Idle-R 1
+      name: Player-Lemper-spritesheet_7
       rect:
         serializedVersion: 2
         x: 32
         y: 128
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,15 +343,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-F 0
+      name: Player-Lemper-spritesheet_8
       rect:
         serializedVersion: 2
         x: 0
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,15 +364,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-F 1
+      name: Player-Lemper-spritesheet_9
       rect:
         serializedVersion: 2
         x: 32
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,15 +385,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-F 2
+      name: Player-Lemper-spritesheet_10
       rect:
         serializedVersion: 2
         x: 64
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,15 +406,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-F 3
+      name: Player-Lemper-spritesheet_11
       rect:
         serializedVersion: 2
         x: 96
         y: 96
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,15 +427,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-L 0
+      name: Player-Lemper-spritesheet_12
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,15 +448,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-L 1
+      name: Player-Lemper-spritesheet_13
       rect:
         serializedVersion: 2
         x: 32
         y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -469,15 +469,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-L 2
+      name: Player-Lemper-spritesheet_14
       rect:
         serializedVersion: 2
         x: 64
         y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -490,15 +490,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-L 3
+      name: Player-Lemper-spritesheet_15
       rect:
         serializedVersion: 2
         x: 96
         y: 64
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -511,15 +511,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-B 0
+      name: Player-Lemper-spritesheet_16
       rect:
         serializedVersion: 2
         x: 0
         y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -532,15 +532,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-B 1
+      name: Player-Lemper-spritesheet_17
       rect:
         serializedVersion: 2
         x: 32
         y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -553,15 +553,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-B 2
+      name: Player-Lemper-spritesheet_18
       rect:
         serializedVersion: 2
         x: 64
         y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -574,15 +574,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-B 3
+      name: Player-Lemper-spritesheet_19
       rect:
         serializedVersion: 2
         x: 96
         y: 32
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -595,15 +595,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-R 0
+      name: Player-Lemper-spritesheet_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -616,15 +616,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-R 1
+      name: Player-Lemper-spritesheet_21
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -637,15 +637,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-R 2
+      name: Player-Lemper-spritesheet_22
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -658,15 +658,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lemper-Run-R 3
+      name: Player-Lemper-spritesheet_23
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

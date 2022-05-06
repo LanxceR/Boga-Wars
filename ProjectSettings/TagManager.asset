@@ -54,8 +54,11 @@ TagManager:
   - name: Design
     uniqueID: 3091118667
     locked: 0
-  - name: Character
+  - name: Middleground
     uniqueID: 2338467963
+    locked: 0
+  - name: Sidewalls
+    uniqueID: 2382592229
     locked: 0
   - name: Projectile
     uniqueID: 3516318727

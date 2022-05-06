@@ -10,14 +10,13 @@ public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
     private LookAtMouse weapon;
-    private PlayerMovement playerMove;
+
+    [SerializeField] private PlayerMovement playerMove;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-
-        playerMove = GetComponent<PlayerMovement>();
         weapon = GetComponentInChildren<LookAtMouse>();
     }
 
