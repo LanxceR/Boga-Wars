@@ -31,10 +31,10 @@ public class LookAtMouse : MonoBehaviour
     }
 
     // OnLook listener from InputAction "PlayerInput.inputaction"
-    void OnLook(InputValue moveValue)
+    void OnLook(InputValue mousePos)
     {
         // Get mouse position on screen
-        mousePosition = moveValue.Get<Vector2>();
+        mousePosition = mousePos.Get<Vector2>();
 
         // Translate screen position to world position
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePosition);
