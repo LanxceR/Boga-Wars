@@ -9,15 +9,14 @@ public enum PlayerState
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
-    private LookAtMouse weapon;
 
+    [SerializeField] private LookAtMouse weapon;
     [SerializeField] private PlayerMovement playerMove;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        weapon = GetComponentInChildren<LookAtMouse>();
     }
 
     // Update is called once per frame
