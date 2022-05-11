@@ -57,14 +57,8 @@ TagManager:
   - name: Middleground
     uniqueID: 2338467963
     locked: 0
-  - name: Sidewalls
-    uniqueID: 2382592229
-    locked: 0
-  - name: Projectile
-    uniqueID: 3516318727
-    locked: 0
   - name: Foreground
-    uniqueID: 994459795
+    uniqueID: 2382592229
     locked: 0
   - name: Priority
     uniqueID: 553036951
