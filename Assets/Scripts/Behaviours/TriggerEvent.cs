@@ -22,7 +22,7 @@ public class TriggerEvent : MonoBehaviour
     {
         foreach (string tag in targetTags)
         {
-            //Debug.Log("Target collision: " + TargetTag + ", Collision tag: " + other.tag);
+            //Debug.Log("Collision: " + name + ", other: " + other.name);
             // Check if object collided with a desired tagged object
             if (other.tag == tag)
             {
@@ -38,7 +38,7 @@ public class TriggerEvent : MonoBehaviour
     {
         foreach (string tag in targetTags)
         {
-            //Debug.Log("Target collision: " + TargetTag + ", Collision tag: " + other.tag);
+            //Debug.Log("Collision: " + name + ", other: " + other.name);
             // Check if object collided with a desired tagged object
             if (other.tag == tag)
             {
@@ -54,7 +54,7 @@ public class TriggerEvent : MonoBehaviour
     {
         foreach (string tag in targetTags)
         {
-            //Debug.Log("Target collision: " + TargetTag + ", Collision tag: " + other.tag);
+            //Debug.Log("Collision: " + name + ", other: " + other.name);
             // Check if object collided with a desired tagged object
             if (other.tag == tag)
             {
