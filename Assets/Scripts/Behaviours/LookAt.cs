@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class LookAtMouse : MonoBehaviour
+public class LookAt : MonoBehaviour
 {
-    private Vector2 mousePosition;
+    public Transform Target;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -22,24 +21,20 @@ public class LookAtMouse : MonoBehaviour
         if (180f < transform.eulerAngles.z && transform.eulerAngles.z < 360f)
         {
             transform.localScale = new Vector3(1, 1, 1);
-        } 
+        }
         else
         {
 
             transform.localScale = new Vector3(-1, 1, 1);
         }
+
+        LookAtTarget();
     }
 
-    // OnLook listener from InputAction "PlayerInput.inputaction"
-    void OnLook(InputValue mousePos)
+    // Look at target (rotate gameobject towards target)
+    private void LookAtTarget()
     {
-        // Get mouse position on screen
-        mousePosition = mousePos.Get<Vector2>();
-
-        // Translate screen position to world position
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePosition);
-
         // "Rotate" this gameobject up axis
-        transform.up = new Vector3(worldPos.x - transform.position.x, worldPos.y - transform.position.y);
+        transform.up = Target.position - transform.position;
     }
 }

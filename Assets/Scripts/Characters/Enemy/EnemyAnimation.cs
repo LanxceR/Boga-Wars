@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerState
+public enum EnemyState
 {
     IDLE, RUN
 }
 [RequireComponent(typeof(Animator))]
-public class PlayerAnimation : MonoBehaviour
+public class EnemyAnimation : MonoBehaviour
 {
     private Animator anim;
 
-    [SerializeField] private LookAtMouse mouseLook;
-    [SerializeField] private PlayerMovement playerMove;
+    [SerializeField] private LookAt lookAt;
+    [SerializeField] private EnemyAIMovement enemyAIMove;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +25,9 @@ public class PlayerAnimation : MonoBehaviour
     {
         UpdateAnimationState();
 
-        if (mouseLook)
+        if (lookAt)
         {
-            Vector2 lookDirection = mouseLook.transform.up;
+            Vector2 lookDirection = lookAt.transform.up;
 
             anim.SetFloat("DirX", lookDirection.x);
             anim.SetFloat("DirY", lookDirection.y);
@@ -40,16 +40,16 @@ public class PlayerAnimation : MonoBehaviour
 
     private void UpdateAnimationState()
     {
-        PlayerState state;
+        EnemyState state;
 
 
-        if (playerMove.MoveX != 0 || playerMove.MoveY != 0)
+        if (enemyAIMove.isMoving)
         {
-            state = PlayerState.RUN;
+            state = EnemyState.RUN;
         }
         else
         {
-            state = PlayerState.IDLE;
+            state = EnemyState.IDLE;
         }
 
         anim.SetInteger("State", (int)state);
