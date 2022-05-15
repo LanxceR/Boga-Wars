@@ -39,7 +39,7 @@ public class LookAtMouse : MonoBehaviour
         // Translate screen position to world position
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        // Rotate weapon parent
+        // "Rotate" this gameobject up axis
         transform.up = new Vector3(worldPos.x - transform.position.x, worldPos.y - transform.position.y);
     }
 }

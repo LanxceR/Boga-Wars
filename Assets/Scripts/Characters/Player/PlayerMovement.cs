@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(BoxCollider2D))]
+
 public class PlayerMovement : MonoBehaviour
 {
-    private BoxCollider2D col;
     private Rigidbody2D rb;
 
     [Header("Movement Settings")]
@@ -22,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
     }
 

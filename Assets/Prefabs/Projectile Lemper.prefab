@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipRotation: 1
-  speedInRotation: 1
+  speedInRotation: 4
   constrainRotation: 0
   frequency: 0.5
   maxRotation: 45

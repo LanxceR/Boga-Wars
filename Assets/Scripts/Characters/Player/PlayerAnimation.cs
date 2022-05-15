@@ -6,11 +6,12 @@ public enum PlayerState
 {
     IDLE, RUN
 }
+[RequireComponent(typeof(Animator))]
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
 
-    [SerializeField] private LookAtMouse weapon;
+    [SerializeField] private LookAtMouse mouseLook;
     [SerializeField] private PlayerMovement playerMove;
 
     // Start is called before the first frame update
@@ -24,12 +25,12 @@ public class PlayerAnimation : MonoBehaviour
     {
         UpdateAnimationState();
 
-        if (weapon)
+        if (mouseLook)
         {
-            Vector2 weaponRotation = weapon.transform.up;
+            Vector2 lookDirection = mouseLook.transform.up;
 
-            anim.SetFloat("DirX", weaponRotation.x);
-            anim.SetFloat("DirY", weaponRotation.y);
+            anim.SetFloat("DirX", lookDirection.x);
+            anim.SetFloat("DirY", lookDirection.y);
         }
         else
         {
