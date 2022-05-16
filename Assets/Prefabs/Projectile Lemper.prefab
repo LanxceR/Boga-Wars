@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipRotation: 1
-  speedInRotation: 4
+  speedInRotation: 6
   constrainRotation: 0
   frequency: 0.5
   maxRotation: 45
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14796a28ced555844952723389bd14e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 5
 --- !u!114 &6279372186529501618
 MonoBehaviour:
   m_ObjectHideFlags: 0
