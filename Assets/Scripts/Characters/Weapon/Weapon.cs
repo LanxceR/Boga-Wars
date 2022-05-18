@@ -20,6 +20,9 @@ public class Weapon : MonoBehaviour
     [Header("Muzzles / Fire Positions")]
     [SerializeField] private List<WeaponMuzzle> muzzles;
 
+    [Header("Misc Settings")]
+    [SerializeField] private bool drawGizmo = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,5 +71,15 @@ public class Weapon : MonoBehaviour
             //Set Cooldown
             cooldown = fireRateDelay;
         }
+    }
+
+    // Implement this OnDrawGizmosSelected if you want to draw gizmos only if the object is selected
+    private void OnDrawGizmos()
+    {
+        if (!drawGizmo) return;
+
+        // Weapon range
+        Gizmos.color = new Color(240f / 255, 120f / 255, 46f / 255);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }
