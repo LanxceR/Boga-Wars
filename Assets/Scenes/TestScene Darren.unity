@@ -250,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAA4Iey0aqpAcwIAADAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxA4bQW+sQ0kMSJrSTiy9CWmMNsuSR5ADJ8N+7km3sUl8sv7efb1f+IkLZCpjTZm0Ef9YcyPcR8WfybdSTT3Cie6224hM6m3fBXeGNaLB5o05oxGPvZnUJzgj2Q+2lN44QrJXItSlXfA+pts4inFNpASmjnfdWCH2NyAlf46V3OePpbuFPn3haRqMLHhkoB6Y3jZPJ0j/3cesxjqMGWcSt5ziZRP65m96HELVikpYVcN9PHynpIkynwUxhp62FZ5iWUti2TOLOVZAhpZWtsUk04IJi26G2aJIgUIDYF843MXR/zXMLrlXF0PODMKhfE5f81I2oJbWHprIPKmufaT4LRTUxn/+jx3Ggc6PLpy5tHPkUrhDs8EbPjFo3EH0IP/SVx0GfI5UHupPwXoB60Wuja8WRdKb2rrWFu4f+89pZWgA79HhT6g1YV73g3Yy7CfseLqH5UypFuQtCzhpgK3UQPCwGGBzNLyw4rI1tQyDqq/hj4TfdD/erJR6FsQ6ptkvly9vp2nhTsgqa+W5ql2qjIMBt0RUoKt15g2Hc7QRvuEHaG+aR+pvUJm+57oLcuAS4t4+iG2qjj9dh2UIfn8EWr7WTQkFftCdeUKdUK9Us2FCTzm1bm5yygdu+Fvzf1SK7OVvMIzaL4+k9ncFynMQQ4YWDRcLZNFlQEnZPKOyTyk1TaCsPTk31wRXuWfeDGa0NrcKyc0OPa/FZ6oHkQuV6ywyAem0iXAsHg0nwWvIVFyjQFpwTKsybfGVEanYAnl0DZaHT1ckZmvVRMlKJD+08kpE0/FEy4uHrLm8MfAg4+uRdsAu5/AVQSwMEFAAACAgAADgh7D4ZtGFtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKSWbK5mUGyiaGhsUWiSaqlrqlhqoGlhWGquWlKsrGpeaJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAADgh7LRqqkBzAgAAMAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAADgh7D4ZtGFtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+    dataString: UEsDBBQAAAgIAAA4IezQg4xfcwIAADEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxA4bQW+sQ0kMSJrSTiy9CWmMNsuSR5ADJ8N+7km3sUl8sv/16+3blLyKUrYA5bdZG8GfNgXwfEX8m30a98QlOdK/VVnxC5/MuuCu8Ew0+b9QJjXjsw6wuwRnBfqi99M4RgrUSuTbliu8h1dZZhHMqLaDJaOejFUJfI3LC13jpQ854ulv40yeeltHogkcGyoHpXeNksvTPfdxGjOOoQRZxGzlOJpF/7qb3IUWtmKRlBdz302dKugzTaXBT2Gnr4S1MSylsS5O4cxVkSGlla2wSHbig2HbgFk0SBAoQ+8L5Jobhr3luwbWqGHp+EAb1a/KSn7oRtaT20DD7oLL2leazQKrJ+fyfeRwHc250+dSVjSNfwhWCHd7omVHrBqIP4YeeeRz0OVJ5oDsJ7wWoF702ulYcjc7UPrS2cPfQf147Swtghx5vqN6AddUL3s24m7Dv4RKaP6VSlLsg5KwBtlIHwcNigMHR/ELCYW1smwJRz+KPhd90P9yv1vAojHVoartUnt5O18a7klXQzHdTu1QbBQFuSVegqHTnDaZxtxO8sQ3K3lgeqb9JbfHW1l2Qm5AA9/5RdGPa6ON1WLbQx2ewxWvtpFDQk/aGF9Qp1Uo1CzbUpAvb1ianbBC2rwX/d7XIbs4W84jN4nh6T2ewHCcxRHjhYJFwNk0WlITdEwr7pHLTEG3lwampPrnCPet+MKO1oVVYdm7ocS0+Sz0kKFSut8wAqNcmxZU5GKyC95KvuECFtuCcUGHg5CsjUrMD8OxaMwutrk7O0KzPkpFKfGjnkYyk4ZeSEQ9fl3lj4EPA0Rfvkl3I5S9QSwMEFAAACAgAADgh7D4ZtGFtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKSWbK5mUGyiaGhsUWiSaqlrqlhqoGlhWGquWlKsrGpeaJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAADgh7NCDjF9zAgAAMQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAADgh7D4ZtGFtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2367,6 +2367,7 @@ MonoBehaviour:
   startingAmmo: Infinity
   projectileType: 0
   muzzles: []
+  drawGizmo: 0
 --- !u!1 &1077562646
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,7 +6111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1140831773
 Transform:
   m_ObjectHideFlags: 0
@@ -6190,6 +6191,7 @@ GameObject:
   - component: {fileID: 1163377939}
   - component: {fileID: 1163377940}
   - component: {fileID: 1163377943}
+  - component: {fileID: 1163377945}
   m_Layer: 0
   m_Name: Enemy Pizza
   m_TagString: Enemy
@@ -6297,7 +6299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoving: 0
   Target: {fileID: 2035555825}
-  look: {fileID: 1607564082}
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -6305,9 +6306,9 @@ MonoBehaviour:
   pathUpdateIntervalSeconds: 0.5
   nextWaypointDistance: 1
   Speed: 2
-  drawGizmo: 0
   followTarget: 1
-  canSeePlayer: 1
+  canSeeTarget: 1
+  drawGizmo: 1
 --- !u!4 &1163377944
 Transform:
   m_ObjectHideFlags: 0
@@ -6324,6 +6325,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163377945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163377938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2eb7364e8ab3340bf0356803697c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2035555825}
+  weaponAttachPosition: {fileID: 414656298}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  shootDistance: 7
+  canShootTarget: 1
+  drawGizmo: 1
 --- !u!1 &1228033980
 GameObject:
   m_ObjectHideFlags: 0
@@ -18583,13 +18604,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c743a0217f356439fa6a1afe6770b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRateDelay: 0.5
+  fireRateDelay: 3
   damage: 10
   range: 10
-  velocity: 5
+  velocity: 5.5
   startingAmmo: Infinity
-  projectileType: 0
+  projectileType: 2
   muzzles: []
+  drawGizmo: 1
 --- !u!114 &1607564082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21028,6 +21050,7 @@ MonoBehaviour:
   startingAmmo: Infinity
   projectileType: 0
   muzzles: []
+  drawGizmo: 0
 --- !u!1 &1965903920
 GameObject:
   m_ObjectHideFlags: 0
@@ -21653,7 +21676,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 10ac8501b8b612f4c85560e272ba80bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21712,7 +21735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f811eb28297294dbde2d7a33aa01b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
+  Speed: 5
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -21886,7 +21909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143484091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -2.5, z: -10}
+  m_LocalPosition: {x: 5.9999995, y: -2.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1895972269}
@@ -21942,6 +21965,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1458252465401672242, guid: 8de9f9a8a60411a469f4b9f39b9d4d6e, type: 3}
+      propertyPath: Prefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458252465401672242, guid: 8de9f9a8a60411a469f4b9f39b9d4d6e, type: 3}
+      propertyPath: Prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 6279372186529501624, guid: 237d875bf3749c74890cdee444f6895d, type: 3}
     - target: {fileID: 1458252465401672243, guid: 8de9f9a8a60411a469f4b9f39b9d4d6e, type: 3}
       propertyPath: m_RootOrder
       value: 2
