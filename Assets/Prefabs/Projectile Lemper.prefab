@@ -327,7 +327,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onProjectileHitEnemy:
+  onProjectileHitTarget:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6279372185498745062}
@@ -429,7 +429,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6279372186529501630}
         m_TargetAssemblyTypeName: ProjectileAnimation, Assembly-CSharp
-        m_MethodName: TriggerHitEnemy
+        m_MethodName: TriggerHitTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

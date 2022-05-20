@@ -60,7 +60,7 @@ public class EnemyShoot : MonoBehaviour
             foreach (Weapon w in weapons)
             {
                 // If it can, fire all weapons
-                w.Shoot();
+                w.Attack();
             }
         }
     }
