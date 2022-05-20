@@ -90,6 +90,13 @@ public class EnemyShoot : MonoBehaviour
     {
         if (!drawGizmo) return;
 
+        // Line of sight
+        if (targetIsInSight)
+            Gizmos.color = Color.green;
+        else
+            Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, Target.position);
+
         // Weapon range
         Gizmos.color = new Color(224f / 255, 230f / 255, 46f / 255);
         Gizmos.DrawWireSphere(transform.position, shootDistance);

@@ -18,6 +18,8 @@ public class EnemyAIMovement : MonoBehaviour
     private bool targetIsInSight = false;
     private float distanceToEnd;
 
+    private float radius;
+
     [HideInInspector] public bool isMoving = false;
 
     [Header("Pathfinding Settings")]
@@ -133,7 +135,8 @@ public class EnemyAIMovement : MonoBehaviour
     private void IsTargetInLineOfSight()
     {
         // Perform a raycast from transform position to target's position
-        hit = Physics2D.BoxCast(transform.position, col.bounds.size, 0, DirectionToTarget(), distanceToEnd, obstacleLayerMask);
+        radius = col.bounds.size.x > col.bounds.size.y ? col.bounds.size.x/2 : col.bounds.size.y/2;
+        hit = Physics2D.CircleCast(transform.position, radius, DirectionToTarget(), distanceToEnd, obstacleLayerMask);
 
         // If raycast hit something, that means there's an obstacle in the way
         // If there's an obstacle in the way, target is NOT in line of sight
@@ -160,6 +163,7 @@ public class EnemyAIMovement : MonoBehaviour
         else
             Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, Target.position);
+        Gizmos.DrawWireSphere(transform.position, radius);
 
         // Stop distance
         Gizmos.color = new Color(166f / 255, 0f / 255, 255f / 255);
