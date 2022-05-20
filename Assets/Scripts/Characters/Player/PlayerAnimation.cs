@@ -25,6 +25,11 @@ public class PlayerAnimation : MonoBehaviour
     {
         UpdateAnimationState();
 
+        UpdateAnimationDirection();
+    }
+
+    private void UpdateAnimationDirection()
+    {
         if (mouseLook)
         {
             Vector2 lookDirection = mouseLook.transform.up;

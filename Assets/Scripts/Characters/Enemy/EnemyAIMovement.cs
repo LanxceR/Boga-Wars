@@ -4,24 +4,26 @@ using UnityEngine;
 using Pathfinding;
 using System;
 
-[RequireComponent(typeof(Seeker))]
+[RequireComponent(typeof(Seeker), typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class EnemyAIMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D col;
     private Seeker seeker;
     private Path path;
     private RaycastHit2D hit;
 
     private int currentWaypoint;
     private bool reachedEndOfPath = false;
-    private bool playerIsInSight = false;
+    private bool targetIsInSight = false;
     private float distanceToEnd;
+
+    private float radius;
 
     [HideInInspector] public bool isMoving = false;
 
     [Header("Pathfinding Settings")]
     public Transform Target;
-    [SerializeField] private LookAt look; // For line of sight detection
     [SerializeField] private LayerMask obstacleLayerMask;
 
     [SerializeField] private float endReachedDistance = 1f; // Useful for ranged characters to stop at a distance to shoot/attack
@@ -32,14 +34,15 @@ public class EnemyAIMovement : MonoBehaviour
     public float Speed = 3f; //Movespeed
 
     [Header("Misc Settings")]
-    [SerializeField] private bool drawGizmo = false;
     [SerializeField] private bool followTarget = true;
-    [SerializeField] private bool canSeePlayer = true;
+    [SerializeField] private bool canSeeTarget = true;
+    [SerializeField] private bool drawGizmo = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<BoxCollider2D>();
         seeker = GetComponent<Seeker>();
 
         InvokeRepeating(nameof(UpdatePath), 0f, pathUpdateIntervalSeconds);
@@ -54,9 +57,9 @@ public class EnemyAIMovement : MonoBehaviour
     // This function is called every fixed framerate frame, if the MonoBehaviour is enabled
     private void FixedUpdate()
     {
-        if (canSeePlayer)
+        if (canSeeTarget)
         {
-            IsPlayerInLineOfSight();
+            IsTargetInLineOfSight();
         }
 
         if (followTarget)
@@ -98,7 +101,7 @@ public class EnemyAIMovement : MonoBehaviour
 
         // Has this object reached the destination yet (within this endReachedDistance radius)
         distanceToEnd = Vector2.Distance(rb.position, Target.position);
-        if (distanceToEnd <= endReachedDistance && playerIsInSight)
+        if (distanceToEnd <= endReachedDistance && targetIsInSight)
         {
             isMoving = false;
             reachedEndOfPath = true;
@@ -128,18 +131,25 @@ public class EnemyAIMovement : MonoBehaviour
         }
     }
 
-    // Check if player is in gameobject's "line of sight"
-    private void IsPlayerInLineOfSight()
+    // Check if target is in gameobject's "line of sight"
+    private void IsTargetInLineOfSight()
     {
-        // Perform a raycast from look's root transform position to target's position
-        hit = Physics2D.Raycast(look.transform.position, look.transform.up, distanceToEnd, obstacleLayerMask);
+        // Perform a raycast from transform position to target's position
+        radius = col.bounds.size.x > col.bounds.size.y ? col.bounds.size.x/2 : col.bounds.size.y/2;
+        hit = Physics2D.CircleCast(transform.position, radius, DirectionToTarget(), distanceToEnd, obstacleLayerMask);
 
         // If raycast hit something, that means there's an obstacle in the way
-        // If there's an obstacle in the way, player is NOT in line of sight
+        // If there's an obstacle in the way, target is NOT in line of sight
         if (hit)
-            playerIsInSight = false;
+            targetIsInSight = false;
         else
-            playerIsInSight = true;
+            targetIsInSight = true;
+    }
+
+    // Find direction in Vector3 to the target
+    private Vector3 DirectionToTarget()
+    {
+        return Target.position - transform.position;
     }
 
     // Implement this OnDrawGizmosSelected if you want to draw gizmos only if the object is selected
@@ -148,11 +158,12 @@ public class EnemyAIMovement : MonoBehaviour
         if (!drawGizmo) return;
 
         // Line of sight
-        if (playerIsInSight) 
+        if (targetIsInSight) 
             Gizmos.color = Color.green;
         else
             Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, Target.position);
+        Gizmos.DrawWireSphere(transform.position, radius);
 
         // Stop distance
         Gizmos.color = new Color(166f / 255, 0f / 255, 255f / 255);
