@@ -10,6 +10,7 @@ public class FollowMouse : MonoBehaviour
     [SerializeField] private Transform rootTransform;
     [SerializeField] private float maxRadius;
 
+
     // Start is called before the first frame update
     void Start()
     {

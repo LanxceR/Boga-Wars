@@ -51,27 +51,38 @@ public class EnemyAIMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Set the active player in Game Manager as the target
+        if (!Target)
+            SetTarget(GameManager.GetInstance().ActivePlayer.transform);
     }
 
     // This function is called every fixed framerate frame, if the MonoBehaviour is enabled
     private void FixedUpdate()
     {
-        if (canSeeTarget)
+        if (Target)
         {
-            IsTargetInLineOfSight();
-        }
+            if (canSeeTarget)
+            {
+                IsTargetInLineOfSight();
+            }
 
-        if (followTarget)
-        {
-            PathFollow();
+            if (followTarget)
+            {
+                PathFollow();
+            }
         }
+    }
+
+    // Set the target
+    private void SetTarget(Transform target)
+    {
+        Target = target;
     }
 
     // Update/generate/calculate a new path
     private void UpdatePath()
     {
-        if (seeker.IsDone() && followTarget)
+        if (seeker.IsDone() && followTarget && Target)
         {
             // Start path calculation
             seeker.StartPath(rb.position, Target.position, OnPathGenComplete);
@@ -162,8 +173,11 @@ public class EnemyAIMovement : MonoBehaviour
             Gizmos.color = Color.green;
         else
             Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, Target.position);
-        Gizmos.DrawWireSphere(transform.position, radius);
+        if (Target)
+        {
+            Gizmos.DrawLine(transform.position, Target.position);
+            Gizmos.DrawWireSphere(transform.position, radius);
+        }
 
         // Stop distance
         Gizmos.color = new Color(166f / 255, 0f / 255, 255f / 255);

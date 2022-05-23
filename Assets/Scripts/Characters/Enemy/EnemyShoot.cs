@@ -31,10 +31,28 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canShootTarget)
+        // Set the active player in Game Manager as the target
+        if (!Target)
+            SetTarget(GameManager.GetInstance().ActivePlayer.transform);
+
+        if (canShootTarget && Target)
         {
             IsTargetInLineOfSight();
             TryToShoot();
+        }
+    }
+
+    // Set the target
+    private void SetTarget(Transform target)
+    {
+        Target = target;
+
+        foreach (Weapon w in weapons)
+        {
+            // Set the target for each weapon if it hasn't
+            LookAt weaponLook = w.GetComponent<LookAt>();
+            if (!weaponLook.Target)
+                weaponLook.SetTarget(Target);
         }
     }
 
@@ -59,7 +77,7 @@ public class EnemyShoot : MonoBehaviour
         {
             foreach (Weapon w in weapons)
             {
-                // If it can, fire all weapons
+                // Try to fire all weapons
                 w.Attack();
             }
         }
