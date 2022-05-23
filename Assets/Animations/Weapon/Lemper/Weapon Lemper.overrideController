@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Weapon Lemper
+  m_Controller: {fileID: 9100000, guid: a61a5f14ebcf32e4484276835d98ff6d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 64eb50caf1ecec540ba106388b708024, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 64eb50caf1ecec540ba106388b708024, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 324a9c50005b4054697a29414a785d94, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 324a9c50005b4054697a29414a785d94, type: 2}

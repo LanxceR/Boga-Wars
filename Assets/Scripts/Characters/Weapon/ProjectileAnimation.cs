@@ -8,9 +8,10 @@ public class ProjectileAnimation : MonoBehaviour
     private Animator anim;
     private Projectile projectile;
 
+    [SerializeField] private UnityEvent onProjectileSpawn;
     [SerializeField] private UnityEvent onProjectileOut;
     [SerializeField] private UnityEvent onProjectileHit;
-    [SerializeField] private UnityEvent onProjectileHitEnemy;
+    [SerializeField] private UnityEvent onProjectileHitTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -28,17 +29,24 @@ public class ProjectileAnimation : MonoBehaviour
         }
     }
 
+    // This function is called when the object becomes enabled and active
+    private void OnEnable()
+    {
+        onProjectileSpawn?.Invoke();
+    }
+
+
     // Hit a wall, obstacle, etc
     public void TriggerHit()
     {
         anim.SetTrigger("Hit");
         onProjectileHit?.Invoke();
     }
-    // Hit an enemy
-    public void TriggerHitEnemy()
+    // Hit a target
+    public void TriggerHitTarget()
     {
-        anim.SetTrigger("Hit Enemy");
-        onProjectileHitEnemy?.Invoke();
+        anim.SetTrigger("Hit Target");
+        onProjectileHitTarget?.Invoke();
     }
     // Hit nothing and despawn (because of out of range)
     public void TriggerOut()

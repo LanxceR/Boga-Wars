@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6279372185498745060}
   - component: {fileID: 6279372185498745063}
   - component: {fileID: 6279372185498745057}
-  - component: {fileID: 6279372185498745062}
+  - component: {fileID: 3766039547311447429}
   - component: {fileID: 3560253953718979022}
   m_Layer: 0
   m_Name: Model
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1956499333
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7835913449958676371, guid: 53aecead6e13c3843b8a49c347041ce3, type: 3}
+  m_Sprite: {fileID: 3913478246191223451, guid: a4efe62215d4db14fb7da9bee7cffc9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 6279372185498744986}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 7934c472fbefefe4db970b0426b3e80a, type: 2}
+  m_Controller: {fileID: 22100000, guid: e5ec3928fe89a274ba3d75ee85c77169, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15625
---- !u!114 &6279372185498745062
+--- !u!114 &3766039547311447429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,11 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500ee56454634a44990f2498ecf34021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flipRotation: 1
-  speedInRotation: 4
+  flipRotation: 0
+  speedInRotation: 0
   constrainRotation: 0
-  frequency: 0.5
-  maxRotation: 45
+  frequency: 0
+  maxRotation: 0
 --- !u!114 &3560253953718979022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6279372186529501628}
   - component: {fileID: 6279372186529501625}
   m_Layer: 0
-  m_Name: Projectile Lemper
+  m_Name: Projectile Enemy
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2331b0c29215c449986319542928f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectType: 0
+  ObjectType: 2
 --- !u!114 &6279372186529501629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14796a28ced555844952723389bd14e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 5
 --- !u!114 &6279372186529501618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,87 +273,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff637515fb4372479cb197108031421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onProjectileSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3766039547311447429}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: ResetRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3766039547311447429}
+        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
+        m_MethodName: StopRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onProjectileOut:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6279372185498745062}
-        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: StopRotation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6279372185498745062}
-        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: ResetRotation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onProjectileHit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6279372185498745062}
-        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: StopRotation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6279372185498745062}
-        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: ResetRotation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onProjectileHitEnemy:
+      m_Calls: []
+  onProjectileHitTarget:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6279372185498745062}
-        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: StopRotation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6279372185498745062}
-        m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: ResetRotation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &6279372186529501628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,13 +378,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTags:
-  - Enemy
+  - Player
   onTrigger:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6279372186529501630}
         m_TargetAssemblyTypeName: ProjectileAnimation, Assembly-CSharp
-        m_MethodName: TriggerHitEnemy
+        m_MethodName: TriggerHitTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

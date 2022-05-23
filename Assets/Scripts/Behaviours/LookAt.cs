@@ -28,7 +28,14 @@ public class LookAt : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        LookAtTarget();
+        if (Target)
+            LookAtTarget();
+    }
+
+    // Set the target
+    public void SetTarget(Transform target)
+    {
+        Target = target;
     }
 
     // Look at target (rotate gameobject towards target)
