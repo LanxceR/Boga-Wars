@@ -8,6 +8,9 @@ public class Weapon : MonoBehaviour
     private WeaponAnimation weaponAnim;
     private float cooldown = 0f;
 
+    [Header("Parent Settings")]
+    [SerializeField] private GameObject parent;
+
     [Header("Main Settings")]
     [SerializeField] private float fireRateDelay = 0.1f;
     [SerializeField] private float damage = 1f;
@@ -89,7 +92,7 @@ public class Weapon : MonoBehaviour
         {
             foreach (WeaponMuzzle muzzle in muzzles)
             {
-                muzzle.SpawnProjectile(projectileType, range, damage, velocity, knockbackForce);
+                muzzle.SpawnProjectile(projectileType, range, damage, velocity, knockbackForce, parent);
             }
 
             //Set Cooldown

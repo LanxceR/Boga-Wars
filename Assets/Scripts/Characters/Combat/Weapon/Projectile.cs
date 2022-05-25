@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 {
     private Collider2D col; // To disable collider when exploding
     private Moveable movement;
+    private GameObject attacker;
     private Vector2 startingPosition;
     private float range = 5f;
     private bool hit;
@@ -38,7 +39,11 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsOutOfRange() && !HasHit())
+        if (HasHit())
+        {
+            col.enabled = false;
+        }
+        else if (IsOutOfRange() && !HasHit())
         {
             movement.StopMoving();
         }
@@ -60,9 +65,30 @@ public class Projectile : MonoBehaviour
         this.knockbackForce = knockbackForce;
     }
 
+    public void SetAttacker(GameObject attacker)
+    {
+        this.attacker = attacker;
+    }
+
     public void SetVelocity(float velocity)
     {
         movement.SetSpeed(velocity);
+    }
+
+    // Do damage to a gameObject
+    public void DoDamage(GameObject victim)
+    {
+        if (victim.TryGetComponent<HealthSystem>(out HealthSystem health))
+        {
+            // Damage health
+            health.TakeDamage(attacker, damage);
+        }
+
+        if (victim.TryGetComponent<KnockbackSystem>(out KnockbackSystem knockback))
+        {
+            // Knockback push
+            knockback.DoKnockback(knockbackForce, transform.up, !health.isDead);
+        }
     }
 
     // Check if projectile had travelled its range distance

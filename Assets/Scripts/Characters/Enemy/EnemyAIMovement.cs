@@ -117,6 +117,7 @@ public class EnemyAIMovement : MonoBehaviour
         distanceToEnd = Vector2.Distance(rb.position, Target.position);
         if (distanceToEnd <= endReachedDistance && targetIsInSight)
         {
+            movement.StopMoving();
             isMoving = false;
             reachedEndOfPath = true;
             return;

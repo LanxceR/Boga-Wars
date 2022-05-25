@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c743a0217f356439fa6a1afe6770b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 1498463198709154872}
   fireRateDelay: 0.5
   damage: 10
   range: 10
@@ -207,7 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14796a28ced555844952723389bd14e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
 --- !u!114 &1498463198709154874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +239,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aa692da6b84694e83a2ac35dfba28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  isInvincible: 0
+  components: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthReachZero:
+    m_PersistentCalls:
+      m_Calls: []
+  isDead: 0
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  flashColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1498463199104737996
 GameObject:
   m_ObjectHideFlags: 0

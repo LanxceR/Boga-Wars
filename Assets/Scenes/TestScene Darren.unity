@@ -1957,6 +1957,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1498463198633022787, guid: 13c4c175a9ee4534280a79918f0c4899, type: 3}
+      propertyPath: fireRateDelay
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498463198633022787, guid: 13c4c175a9ee4534280a79918f0c4899, type: 3}
+      propertyPath: knockbackForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1498463198709154872, guid: 13c4c175a9ee4534280a79918f0c4899, type: 3}
       propertyPath: m_Name
       value: Player Lemper
@@ -2130,6 +2138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c743a0217f356439fa6a1afe6770b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
   fireRateDelay: 0.5
   damage: 10
   range: 10
@@ -5859,9 +5868,11 @@ GameObject:
   - component: {fileID: 1163377941}
   - component: {fileID: 1163377939}
   - component: {fileID: 1163377940}
+  - component: {fileID: 1163377947}
   - component: {fileID: 1163377943}
   - component: {fileID: 1163377945}
   - component: {fileID: 1163377946}
+  - component: {fileID: 1163377948}
   m_Layer: 0
   m_Name: Enemy Pizza
   m_TagString: Enemy
@@ -6027,6 +6038,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aa692da6b84694e83a2ac35dfba28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  isInvincible: 0
+  components: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthReachZero:
+    m_PersistentCalls:
+      m_Calls: []
+  isDead: 0
+  iFramesDuration: 0
+  numberOfFlashes: 0
+  flashColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1163377947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163377938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14796a28ced555844952723389bd14e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1163377948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163377938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91328035fb870604488787f2e49f25fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physMaterial: {fileID: 6200000, guid: 8d4c294d383fcaa48afddac0065033e8, type: 2}
+  knockbackImmune: 0
+  knockbackResist: 9
+  recoveryTime: 0.5
 --- !u!1 &1228033980
 GameObject:
   m_ObjectHideFlags: 0
@@ -17985,6 +18037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c743a0217f356439fa6a1afe6770b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 1163377938}
   fireRateDelay: 3
   damage: 10
   range: 10

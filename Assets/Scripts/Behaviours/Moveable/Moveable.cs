@@ -42,10 +42,10 @@ public class Moveable : MonoBehaviour
     // Get the next position according to direction
     public Vector3 GetNextPosition()
     {
-        return transform.position + NewPosition();
+        return transform.position + GetDirection();
     }
 
-    public Vector3 NewPosition()
+    public Vector3 GetDirection()
     {
         if (!rb)
             return direction.normalized * Time.deltaTime * Speed;
