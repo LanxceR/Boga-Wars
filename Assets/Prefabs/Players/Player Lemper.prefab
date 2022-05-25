@@ -62,6 +62,7 @@ MonoBehaviour:
   damage: 10
   range: 10
   velocity: 8
+  knockbackForce: 10
   startingAmmo: Infinity
   projectileType: 0
   muzzles: []
@@ -75,11 +76,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1498463198709154873}
+  - component: {fileID: 1498463198709154878}
   - component: {fileID: 1498463198709154876}
   - component: {fileID: 1498463198709154877}
   - component: {fileID: 1498463198709154875}
+  - component: {fileID: 1690010950}
   - component: {fileID: 1498463198709154874}
-  - component: {fileID: 1498463198709154878}
+  - component: {fileID: 87758987}
   m_Layer: 0
   m_Name: Player Lemper
   m_TagString: Player
@@ -104,6 +107,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1498463198709154878
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498463198709154872}
+  m_Enabled: 1
+  m_SortingLayerID: -1956499333
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!114 &1498463198709154876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +195,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46875, y: 0.625}
   m_EdgeRadius: 0
+--- !u!114 &1690010950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498463198709154872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14796a28ced555844952723389bd14e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
 --- !u!114 &1498463198709154874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,17 +227,18 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!210 &1498463198709154878
-SortingGroup:
+--- !u!114 &87758987
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498463198709154872}
   m_Enabled: 1
-  m_SortingLayerID: -1956499333
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97aa692da6b84694e83a2ac35dfba28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1498463199104737996
 GameObject:
   m_ObjectHideFlags: 0

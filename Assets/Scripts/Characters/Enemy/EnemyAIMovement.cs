@@ -5,10 +5,12 @@ using Pathfinding;
 using System;
 
 [RequireComponent(typeof(Seeker), typeof(Rigidbody2D), typeof(BoxCollider2D))]
+[RequireComponent(typeof(Moveable))]
 public class EnemyAIMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D col;
+    private Moveable movement;
     private Seeker seeker;
     private Path path;
     private RaycastHit2D hit;
@@ -44,6 +46,7 @@ public class EnemyAIMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         seeker = GetComponent<Seeker>();
+        movement = GetComponent<Moveable>();
 
         InvokeRepeating(nameof(UpdatePath), 0f, pathUpdateIntervalSeconds);
     }
@@ -125,13 +128,13 @@ public class EnemyAIMovement : MonoBehaviour
         }
 
         // Set direction for AI movement
-        Vector2 dir = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized * Speed * Time.fixedDeltaTime;
-        
-        // Get next position
-        Vector2 newPosition = rb.position + dir;
+        Vector2 dir = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
-        // Move rigidbody
-        rb.MovePosition(newPosition);
+        // Set moveable speed
+        movement.SetSpeed(Speed);
+
+        // Move using moveable
+        movement.SetDirection(dir);
 
         // Has this object reached the current waypoint yet? 
         // (using a distance threshold nextWayPointDistance)

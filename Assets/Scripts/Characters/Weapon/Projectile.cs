@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D), typeof(Moveable))]
 public class Projectile : MonoBehaviour
 {
     private Collider2D col; // To disable collider when exploding
@@ -10,6 +11,7 @@ public class Projectile : MonoBehaviour
     private float range = 5f;
     private bool hit;
     private float damage = 1f;
+    private float knockbackForce = 10f;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -53,9 +55,14 @@ public class Projectile : MonoBehaviour
         this.damage = damage;
     }
 
+    public void SetKnockbackForce(float knockbackForce)
+    {
+        this.knockbackForce = knockbackForce;
+    }
+
     public void SetVelocity(float velocity)
     {
-        movement.Speed = velocity;
+        movement.SetSpeed(velocity);
     }
 
     // Check if projectile had travelled its range distance

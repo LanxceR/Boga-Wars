@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
-    public float Speed = 1f;
-
+    private float Speed = 1f;
     private Vector3 direction;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdatePosition();
+        if (!rb)
+            UpdatePosition();
     }
 
-    // Use to regularly update ship position, usually put in Update()
+    // This function is called every fixed framerate frame, if the MonoBehaviour is enabled
+    private void FixedUpdate()
+    {
+        if (rb)
+            FixedUpdatePosition();
+    }
+
+    // Use to regularly update transform position, usually put in Update()
     private void UpdatePosition()
     {
         transform.position = GetNextPosition();
+    }
+    // Use to regularly update rigidbody position with physics, usually put in FixedUpdate()
+    private void FixedUpdatePosition()
+    {
+        rb.MovePosition(GetNextPosition());
     }
 
     // Get the next position according to direction
@@ -34,7 +47,10 @@ public class Moveable : MonoBehaviour
 
     public Vector3 NewPosition()
     {
-        return direction * Time.deltaTime * Speed;
+        if (!rb)
+            return direction.normalized * Time.deltaTime * Speed;
+        else
+            return direction.normalized * Time.fixedDeltaTime * Speed;
     }
 
     // Set movement direction
@@ -53,13 +69,18 @@ public class Moveable : MonoBehaviour
         direction.x = x;
     }
 
+    public void SetSpeed(float speed)
+    {
+        Speed = speed;
+    }
+
     // Stop moving
     public void StopMoving()
     {
         SetDirection(Vector2.zero);
     }
 
-    // Set specific axis direction, usually to reset direction to zero
+    // Set specific axis direction
     internal void SetXDirection(float xValue)
     {
         direction.x = xValue;
