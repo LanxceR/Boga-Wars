@@ -6,12 +6,15 @@ using UnityEngine.Events;
 
 public class HealthSystem : MonoBehaviour
 {
+    private LayerMask defaultLayerMask;
+
     [Header("Sprite Settings")]
     [SerializeField] private SpriteRenderer[] spriteRenderers;
 
     [Header("Health")]
     [SerializeField] private float maxHealth;
     public float currentHealth;
+    [SerializeField] private Color deadColor;
 
     [Header("States")]
     [SerializeField] private bool isInvincible = false;
@@ -23,6 +26,10 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Color blinkColor;
     private Color defaultColor;
 
+    [Header("Layer Masks")]
+    [SerializeField] private LayerMask invulnerableLayerMask;
+    [SerializeField] private LayerMask corpseLayerMask;
+
     [Header("Events")]
     public UnityEvent OnHit;
     public UnityEvent OnHealthReachZero;
@@ -32,6 +39,7 @@ public class HealthSystem : MonoBehaviour
     {
         currentHealth = maxHealth;
         defaultColor = spriteRenderers[0].color;
+        defaultLayerMask = 1 << gameObject.layer;
     }
 
     // Start is called before the first frame update
@@ -43,7 +51,7 @@ public class HealthSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        UpdateState();
     }
 
     // This function is called when the object becomes enabled and active
@@ -101,10 +109,29 @@ public class HealthSystem : MonoBehaviour
         return currentHealth == maxHealth;
     }
 
+    // Perform various update to the object based on different states
+    private void UpdateState()
+    {
+        if (isDead)
+        {
+            SetSpriteColor(deadColor);
+            gameObject.layer = ToLayer(corpseLayerMask.value);
+        }
+        else if (isInvulnerable)
+        {
+            gameObject.layer = ToLayer(invulnerableLayerMask.value);
+        }
+        else
+        {
+            gameObject.layer = ToLayer(defaultLayerMask.value);
+        }
+    }
+
     private void SetSpriteColor(Color color)
     {
         foreach (SpriteRenderer sprite in spriteRenderers)
         {
+            Debug.Log($"{sprite.sprite.name}");
             sprite.color = color;
         }
     }
@@ -130,5 +157,17 @@ public class HealthSystem : MonoBehaviour
         }
 
         SetSpriteColor(defaultColor);
+    }
+
+    // Converts given bitmask to layer number
+    public static int ToLayer(int bitmask)
+    {
+        int result = bitmask > 0 ? 0 : 31;
+        while (bitmask > 1)
+        {
+            bitmask = bitmask >> 1;
+            result++;
+        }
+        return result;
     }
 }

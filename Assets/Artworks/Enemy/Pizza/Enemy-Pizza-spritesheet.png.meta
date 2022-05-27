@@ -74,6 +74,12 @@ TextureImporter:
   - first:
       213: 1004485267923378666
     second: Enemy-Pizza-spritesheet_23
+  - first:
+      213: -4995161325579280939
+    second: Enemy-Pizza-spritesheet_24
+  - first:
+      213: 4474191139214482692
+    second: Enemy-Pizza-spritesheet_25
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -674,6 +680,48 @@ TextureImporter:
       bones: []
       spriteID: ae1afa87706a0fd00800000000000000
       internalID: 1004485267923378666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Pizza-spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddd3196d3f9daab0800000000000000
+      internalID: -4995161325579280939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Pizza-spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d5416c225871e30800000000000000
+      internalID: 4474191139214482692
       vertices: []
       indices: 
       edges: []

@@ -74,6 +74,12 @@ TextureImporter:
   - first:
       213: -4052713038552933047
     second: Player-Lemper-spritesheet_23
+  - first:
+      213: 2410134147498734047
+    second: Player-Lemper-spritesheet_24
+  - first:
+      213: -4000227837870137484
+    second: Player-Lemper-spritesheet_25
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -674,6 +680,48 @@ TextureImporter:
       bones: []
       spriteID: 94d5570b6fed1c7c0800000000000000
       internalID: -4052713038552933047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-Lemper-spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd173badc34827120800000000000000
+      internalID: 2410134147498734047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-Lemper-spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f1f1fb9f55c78c0800000000000000
+      internalID: -4000227837870137484
       vertices: []
       indices: 
       edges: []

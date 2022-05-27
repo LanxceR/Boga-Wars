@@ -315,14 +315,33 @@ MonoBehaviour:
   - {fileID: 2165669675851391961}
   maxHealth: 50
   currentHealth: 0
+  deadColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   isInvincible: 0
   isDead: 0
   isInvulnerable: 0
   iFramesDuration: 0
   blinkColor: {r: 0, g: 0, b: 0, a: 0}
+  invulnerableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  corpseLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   OnHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2165669676855112068}
+        m_TargetAssemblyTypeName: EnemyAnimation, Assembly-CSharp
+        m_MethodName: TriggerHurt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthReachZero:
     m_PersistentCalls:
       m_Calls:
@@ -339,9 +358,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2165669676148542260}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_TargetAssemblyTypeName: Moveable, Assembly-CSharp
+        m_MethodName: StopMoving
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -386,18 +405,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2165669676148542269}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: set_layer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2165669676148542259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physMaterial: {fileID: 6200000, guid: 8d4c294d383fcaa48afddac0065033e8, type: 2}
   knockbackImmune: 0
-  knockbackResist: 9
+  knockbackResist: 4
   recoveryTime: 0.5
 --- !u!1 &2165669676509400320
 GameObject:
@@ -612,6 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAt: {fileID: 2165669676509400349}
   enemyAIMove: {fileID: 2165669676148542264}
+  health: {fileID: 2165669676148542261}
 --- !u!1 &2165669677240099700
 GameObject:
   m_ObjectHideFlags: 0

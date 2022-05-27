@@ -63,7 +63,7 @@ MonoBehaviour:
   damage: 10
   range: 10
   velocity: 8
-  knockbackForce: 10
+  knockbackForce: 5
   startingAmmo: Infinity
   projectileType: 0
   muzzles: []
@@ -244,14 +244,33 @@ MonoBehaviour:
   - {fileID: 1498463199104737998}
   maxHealth: 60
   currentHealth: 0
+  deadColor: {r: 1, g: 1, b: 1, a: 1}
   isInvincible: 0
   isDead: 0
   isInvulnerable: 0
   iFramesDuration: 1
   blinkColor: {r: 0, g: 0, b: 0, a: 0}
+  invulnerableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  corpseLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
   OnHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1498463199456695924}
+        m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
+        m_MethodName: TriggerHurt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthReachZero:
     m_PersistentCalls:
       m_Calls:
@@ -648,6 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseLook: {fileID: 1498463198633022785}
   playerMove: {fileID: 1498463198709154874}
+  health: {fileID: 87758987}
 --- !u!1 &1498463199705243572
 GameObject:
   m_ObjectHideFlags: 0

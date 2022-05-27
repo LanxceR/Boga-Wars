@@ -4,17 +4,17 @@ using UnityEngine;
 
 public enum PlayerState
 {
-    IDLE, RUN
+    IDLE, RUN, DEAD
 }
 [RequireComponent(typeof(Animator))]
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
-    private Color defaultColor;
 
     [Header("Components")]
     [SerializeField] private LookAtMouse mouseLook;
     [SerializeField] private PlayerMovement playerMove;
+    [SerializeField] private HealthSystem health;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,11 @@ public class PlayerAnimation : MonoBehaviour
         UpdateAnimationState();
 
         UpdateAnimationDirection();
+    }
+
+    public void TriggerHurt()
+    {
+        anim.SetTrigger("Hurt");
     }
 
     private void UpdateAnimationDirection()
@@ -54,7 +59,11 @@ public class PlayerAnimation : MonoBehaviour
         {
             state = PlayerState.RUN;
         }
-        else
+        else if (health.isDead)
+        {
+            state = PlayerState.DEAD;
+        }
+        else 
         {
             state = PlayerState.IDLE;
         }
