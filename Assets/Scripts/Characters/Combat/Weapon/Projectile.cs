@@ -78,16 +78,19 @@ public class Projectile : MonoBehaviour
     // Do damage to a gameObject
     public void DoDamage(GameObject victim)
     {
-        if (victim.TryGetComponent<HealthSystem>(out HealthSystem health))
+        victim.TryGetComponent<HealthSystem>(out HealthSystem health);
+        victim.TryGetComponent<KnockbackSystem>(out KnockbackSystem knockback);
+
+        if (health)
         {
             // Damage health
             health.TakeDamage(attacker, damage);
         }
 
-        if (victim.TryGetComponent<KnockbackSystem>(out KnockbackSystem knockback))
+        if (knockback)
         {
             // Knockback push
-            knockback.DoKnockback(knockbackForce, transform.up, !health.isDead);
+            knockback.DoKnockback(knockbackForce, transform.up, !health.isDead, !health.isDead);
         }
     }
 

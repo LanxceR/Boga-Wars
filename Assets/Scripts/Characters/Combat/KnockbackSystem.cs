@@ -33,7 +33,7 @@ public class KnockbackSystem : MonoBehaviour
 
     }
 
-    public void DoKnockback(float force, Vector2 direction, bool canResist)
+    public void DoKnockback(float force, Vector2 direction, bool canResist, bool canRecover)
     {
         // If knockback immune, return
         if (knockbackImmune) return;
@@ -55,8 +55,15 @@ public class KnockbackSystem : MonoBehaviour
         // Apply knockback
         rb.AddForce(direction.normalized * (finalForce), ForceMode2D.Impulse);
 
-        // Recover from knockback after recoveryTime seconds has passed
-        StartCoroutine(RecoverFromKnockback());
+        if (canRecover)
+        {
+            // Recover from knockback after recoveryTime seconds has passed
+            StartCoroutine(RecoverFromKnockback());
+        }
+        else
+        {
+            EnablePhysisMaterial();
+        }
 
         Debug.Log($"{gameObject.name} took {force - moveable.GetDirection().magnitude} knockback");
     }
