@@ -42,6 +42,14 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        // Find a player object if there's already one in scene from the start
+        ActivePlayer = FindObjectOfType<PlayerMovement>().gameObject;
+        if (ActivePlayer)
+        {
+            // If there is one, also add the player to camera's target group
+            SetVcamTargetGroup(ActivePlayer);
+        }
+
         StartGame();
     }
 
@@ -83,10 +91,7 @@ public class GameManager : MonoBehaviour
         if (!ActivePlayer)
         {
             ActivePlayer = Instantiate(PlayerPrefab, spawnPoint.position, Quaternion.identity);
-            FollowMouse aimHelper = ActivePlayer.GetComponentInChildren<FollowMouse>();
-
-            GameVcamTargetGroup.AddMember(ActivePlayer.transform, 0.75f, 0f);
-            GameVcamTargetGroup.AddMember(aimHelper.transform, 0.25f, 0f);
+            SetVcamTargetGroup(ActivePlayer);
         }
         else
         {
@@ -97,5 +102,13 @@ public class GameManager : MonoBehaviour
                 behaviour.enabled = true;
             }
         }
+    }
+
+    public void SetVcamTargetGroup(GameObject player)
+    {
+        FollowMouse aimHelper = player.GetComponentInChildren<FollowMouse>();
+
+        GameVcamTargetGroup.AddMember(ActivePlayer.transform, 0.75f, 0f);
+        GameVcamTargetGroup.AddMember(aimHelper.transform, 0.25f, 0f);
     }
 }

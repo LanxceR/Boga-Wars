@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
+[RequireComponent(typeof(Moveable))]
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Moveable movement;
 
     [Header("Movement Settings")]
     public float Speed = 5f; //Movespeed
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        movement = GetComponent<Moveable>();
     }
 
     // Update is called once per frame
@@ -35,13 +35,13 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Set direction vector for player movement
-        Vector3 dir = new Vector2(MoveX, MoveY).normalized * Speed * Time.fixedDeltaTime;
+        Vector2 dir = new Vector2(MoveX, MoveY);
 
-        // Get next position
-        Vector2 newPosition = transform.position + dir;
+        // Set moveable speed
+        movement.SetSpeed(Speed);
 
-        // Move rigidbody
-        rb.MovePosition(newPosition);
+        // Move using moveable
+        movement.SetDirection(dir);
     }
 
     // OnMove listener from InputAction "PlayerInput.inputaction"

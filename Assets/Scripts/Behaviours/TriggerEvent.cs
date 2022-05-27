@@ -24,7 +24,7 @@ public class TriggerEvent : MonoBehaviour
         {
             //Debug.Log("Collision: " + name + ", other: " + other.name);
             // Check if object collided with a desired tagged object
-            if (other.tag == tag)
+            if (other.gameObject.CompareTag(tag))
             {
                 // Invoke all method inside OnCollision event
                 onTrigger?.Invoke();
@@ -40,7 +40,7 @@ public class TriggerEvent : MonoBehaviour
         {
             //Debug.Log("Collision: " + name + ", other: " + other.name);
             // Check if object collided with a desired tagged object
-            if (other.tag == tag)
+            if (other.gameObject.CompareTag(tag))
             {
                 // Invoke all method inside OnCollision event
                 onTriggerExitEvent?.Invoke();
@@ -56,7 +56,7 @@ public class TriggerEvent : MonoBehaviour
         {
             //Debug.Log("Collision: " + name + ", other: " + other.name);
             // Check if object collided with a desired tagged object
-            if (other.tag == tag)
+            if (other.gameObject.CompareTag(tag))
             {
                 // Invoke all method inside OnCollision event
                 onTriggerStayEvent?.Invoke();

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1498463198633022784}
   - component: {fileID: 1498463198633022785}
   - component: {fileID: 1498463198633022787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,10 +58,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c743a0217f356439fa6a1afe6770b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRateDelay: 0.5
+  parent: {fileID: 1498463198709154872}
+  fireRateDelay: 0.001
   damage: 10
   range: 10
   velocity: 8
+  knockbackForce: 10
   startingAmmo: Infinity
   projectileType: 0
   muzzles: []
@@ -75,12 +77,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1498463198709154873}
+  - component: {fileID: 1498463198709154878}
   - component: {fileID: 1498463198709154876}
   - component: {fileID: 1498463198709154877}
   - component: {fileID: 1498463198709154875}
+  - component: {fileID: 1690010950}
   - component: {fileID: 1498463198709154874}
-  - component: {fileID: 1498463198709154878}
-  m_Layer: 0
+  - component: {fileID: 87758987}
+  m_Layer: 7
   m_Name: Player Lemper
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -104,6 +108,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1498463198709154878
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498463198709154872}
+  m_Enabled: 1
+  m_SortingLayerID: -1956499333
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!114 &1498463198709154876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46875, y: 0.625}
   m_EdgeRadius: 0
+--- !u!114 &1690010950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498463198709154872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14796a28ced555844952723389bd14e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1498463198709154874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,17 +227,70 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!210 &1498463198709154878
-SortingGroup:
+--- !u!114 &87758987
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498463198709154872}
   m_Enabled: 1
-  m_SortingLayerID: -1956499333
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97aa692da6b84694e83a2ac35dfba28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 1498463199456695932}
+  - {fileID: 1498463199104737998}
+  maxHealth: 60
+  currentHealth: 0
+  isInvincible: 0
+  isDead: 0
+  isInvulnerable: 0
+  iFramesDuration: 1
+  blinkColor: {r: 0, g: 0, b: 0, a: 0}
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthReachZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498463198709154874}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1690010950}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1498463198633022799}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1498463199104737996
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +303,7 @@ GameObject:
   - component: {fileID: 1498463199104737998}
   - component: {fileID: 1498463199104737999}
   - component: {fileID: 1498463199104737984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1498463199303636056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponAttachPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498463199423737813}
   - component: {fileID: 1498463199423737814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,8 +532,7 @@ GameObject:
   - component: {fileID: 1498463199456695922}
   - component: {fileID: 1498463199456695923}
   - component: {fileID: 1498463199456695924}
-  - component: {fileID: 1498463199456695925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,38 +648,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseLook: {fileID: 1498463198633022785}
   playerMove: {fileID: 1498463198709154874}
---- !u!114 &1498463199456695925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498463199456695931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb8e887fdb2da3f459dc20b078526738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTags:
-  - EnemyProjectile
-  onTrigger:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerStayEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerWithGameObject:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerExitWithGameObject:
-    m_PersistentCalls:
-      m_Calls: []
-  onTriggerStayWithGameObject:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1498463199705243572
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498463199705243573}
   - component: {fileID: 1498463199705243574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AimHelper
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -656,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498463200286702861}
   - component: {fileID: 1498463200286702862}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

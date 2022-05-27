@@ -10,7 +10,9 @@ public enum PlayerState
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
+    private Color defaultColor;
 
+    [Header("Components")]
     [SerializeField] private LookAtMouse mouseLook;
     [SerializeField] private PlayerMovement playerMove;
 
