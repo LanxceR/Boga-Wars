@@ -54,13 +54,13 @@ public class EnemyAnimation : MonoBehaviour
         EnemyState state;
 
 
-        if (enemyAIMove.isMoving)
-        {
-            state = EnemyState.RUN;
-        }
-        else if (health.isDead)
+        if (health.isDead)
         {
             state = EnemyState.DEAD;
+        }
+        else if (enemyAIMove.isMoving)
+        {
+            state = EnemyState.RUN;
         }
         else
         {

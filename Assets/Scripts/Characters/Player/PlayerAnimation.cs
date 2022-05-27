@@ -55,13 +55,13 @@ public class PlayerAnimation : MonoBehaviour
         PlayerState state;
 
 
-        if (playerMove.MoveX != 0 || playerMove.MoveY != 0)
-        {
-            state = PlayerState.RUN;
-        }
-        else if (health.isDead)
+        if (health.isDead)
         {
             state = PlayerState.DEAD;
+        }
+        else if (playerMove.MoveX != 0 || playerMove.MoveY != 0)
+        {
+            state = PlayerState.RUN;
         }
         else 
         {
