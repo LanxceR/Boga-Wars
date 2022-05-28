@@ -11,15 +11,23 @@ public class Weapon : MonoBehaviour
     [Header("Parent Settings")]
     [SerializeField] private GameObject parent;
 
-    [Header("Main Settings")]
+    [Header("Stats")]
     [SerializeField] private float fireRateDelay = 0.1f;
     [SerializeField] private float damage = 1f;
     [SerializeField] private float range = 5f;
     [SerializeField] private float velocity = 5f;
     [SerializeField] private float knockbackForce = 10f;
+    [Range(0,359)][SerializeField] private float spread = 0f;
+    [SerializeField] private bool isBurstFire = false;
+    [SerializeField] private int burstAmount = 3;
+    [SerializeField] private float burstDelay = 0.03f;
+
+    [Header("Ammo")]
     [SerializeField] private float startingAmmo = Mathf.Infinity;
-    [SerializeField] private PoolObjectType projectileType; //Type of projectile to fire
     public float Ammo { get; private set; }
+
+    [Header("Prefab Type")]
+    [SerializeField] private PoolObjectType projectileType; //Type of projectile to fire
 
     [Header("Muzzles / Fire Positions")]
     [SerializeField] private List<WeaponMuzzle> muzzles;
@@ -90,10 +98,7 @@ public class Weapon : MonoBehaviour
     {
         if (cooldown <= 0f && Ammo > 0)
         {
-            foreach (WeaponMuzzle muzzle in muzzles)
-            {
-                muzzle.SpawnProjectile(projectileType, range, damage, velocity, knockbackForce, parent);
-            }
+            StartCoroutine(ShootCoroutine());
 
             //Set Cooldown
             cooldown = fireRateDelay;
@@ -108,5 +113,30 @@ public class Weapon : MonoBehaviour
         // Weapon range
         Gizmos.color = new Color(240f / 255, 120f / 255, 46f / 255);
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    private IEnumerator ShootCoroutine()
+    {
+        if (isBurstFire)
+        {
+            // Shoot in bursts
+            for (int i = 0; i < burstAmount; i++)
+            {
+                foreach (WeaponMuzzle muzzle in muzzles)
+                {
+                    muzzle.SpawnProjectile(projectileType, range, damage, velocity, knockbackForce, spread, parent);
+                }
+
+                yield return new WaitForSeconds(burstDelay);
+            }
+        } 
+        else
+        {
+            // Shoot once
+            foreach (WeaponMuzzle muzzle in muzzles)
+            {
+                muzzle.SpawnProjectile(projectileType, range, damage, velocity, knockbackForce, spread, parent);
+            }
+        }
     }
 }

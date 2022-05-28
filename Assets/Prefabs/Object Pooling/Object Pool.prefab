@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Parent: {fileID: 1458252465401672243}
-  Size: 50
+  Size: 300
   Prefabs:
   - {fileID: 6279372186529501624, guid: 362f6ccda09d10c4496c7d92c89de5a2, type: 3}
+  - {fileID: 6279372186529501624, guid: 237d875bf3749c74890cdee444f6895d, type: 3}
   poolObjects: []

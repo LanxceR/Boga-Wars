@@ -29,7 +29,7 @@ public static class SaveSystem
         Debug.Log($"Game saved in {path}");
     }
 
-    // Save the game
+    // Load save file
     public static PlayerData LoadGame(string saveName)
     {
         // Setup the filepath location
