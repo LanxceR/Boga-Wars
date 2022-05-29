@@ -8,9 +8,9 @@ public class ObjectPooler : MonoBehaviour
     private static ObjectPooler instance;
 
     [Header("Main Setting")]
-    [SerializeField] private Transform Parent;
-    [SerializeField] private int Size; // Amount to spawn
-    [SerializeField] private PoolObject[] Prefabs; // Array of prefabs to be made as pooled objects
+    [SerializeField] private Transform parent;
+    [SerializeField] private int size; // Amount to spawn
+    [SerializeField] private PoolObject[] prefabs; // Array of prefabs to be made as pooled objects
 
     [Header("Stored Objects")]
     [SerializeField] private List<PoolObject> poolObjects;
@@ -45,12 +45,12 @@ public class ObjectPooler : MonoBehaviour
     private void InstantiateObjects()
     {
         poolObjects = new List<PoolObject>();
-        for (int i = 0; i < Size; i++)
+        for (int i = 0; i < size; i++)
         {
             // Spawn all objects in Prefabs[] array * Size
-            foreach (PoolObject obj in Prefabs)
+            foreach (PoolObject obj in prefabs)
             {
-                poolObjects.Add(Instantiate(obj.gameObject, Parent).GetComponent<PoolObject>());
+                poolObjects.Add(Instantiate(obj.gameObject, parent).GetComponent<PoolObject>());
             }
         }
     }
