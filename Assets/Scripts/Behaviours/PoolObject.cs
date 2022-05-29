@@ -27,11 +27,12 @@ public class PoolObject : MonoBehaviour
         transform.position = position;
         gameObject.SetActive(true);
     }
-    public void Activate(Vector3 position, Quaternion rotation)
+    public PoolObject Activate(Vector3 position, Quaternion rotation)
     {
         transform.position = position;
         transform.rotation = rotation;
         gameObject.SetActive(true);
+        return this;
     }
 
     // Deactivate pool object in hierarchy

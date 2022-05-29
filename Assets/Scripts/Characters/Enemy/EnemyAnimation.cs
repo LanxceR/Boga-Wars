@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum EnemyState
 {
-    IDLE, RUN
+    IDLE, RUN, DEAD
 }
 [RequireComponent(typeof(Animator))]
 public class EnemyAnimation : MonoBehaviour
@@ -13,6 +13,7 @@ public class EnemyAnimation : MonoBehaviour
 
     [SerializeField] private LookAt lookAt;
     [SerializeField] private EnemyAIMovement enemyAIMove;
+    [SerializeField] private HealthSystem health;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,16 @@ public class EnemyAnimation : MonoBehaviour
     {
         UpdateAnimationState();
 
+        UpdateAnimationDirection();
+    }
+
+    public void TriggerHurt()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+    private void UpdateAnimationDirection()
+    {
         if (lookAt)
         {
             Vector2 lookDirection = lookAt.transform.up;
@@ -43,7 +54,11 @@ public class EnemyAnimation : MonoBehaviour
         EnemyState state;
 
 
-        if (enemyAIMove.isMoving)
+        if (health.isDead)
+        {
+            state = EnemyState.DEAD;
+        }
+        else if (enemyAIMove.isMoving)
         {
             state = EnemyState.RUN;
         }
