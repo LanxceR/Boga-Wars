@@ -8,11 +8,12 @@ TagManager:
   - PlayerProjectile
   - EnemyProjectile
   - Enemy
+  - EnemySpawnArea
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - Wall

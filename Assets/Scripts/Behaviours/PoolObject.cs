@@ -8,7 +8,8 @@ public enum PoolObjectType
     PLAYER_SHURIKEN,
     GENERIC_PLAYER_PROJECTILE,
     GENERIC_ENEMY_PROJECTILE,
-    EXPLOSION
+    EXPLOSION_FX,
+    SPAWN_FX
 }
 public class PoolObject : MonoBehaviour
 {

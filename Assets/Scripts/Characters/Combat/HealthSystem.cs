@@ -131,7 +131,6 @@ public class HealthSystem : MonoBehaviour
     {
         foreach (SpriteRenderer sprite in spriteRenderers)
         {
-            Debug.Log($"{sprite.sprite.name}");
             sprite.color = color;
         }
     }
