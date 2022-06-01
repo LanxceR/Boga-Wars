@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 2165669676148542262}
   - component: {fileID: 2165669676148542261}
   - component: {fileID: 2165669676148542259}
+  - component: {fileID: 684097863}
   m_Layer: 7
   m_Name: Enemy Pizza
   m_TagString: Enemy
@@ -421,6 +422,20 @@ MonoBehaviour:
   knockbackImmune: 0
   knockbackResist: 4
   recoveryTime: 0.5
+--- !u!114 &684097863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165669676148542269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d738e5c2a512584ab75ec90272ac7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  comps: []
 --- !u!1 &2165669676509400320
 GameObject:
   m_ObjectHideFlags: 0

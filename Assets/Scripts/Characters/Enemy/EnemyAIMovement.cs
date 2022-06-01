@@ -97,25 +97,22 @@ public class EnemyAIMovement : MonoBehaviour
     {
         if (!p.error)
         {
-            // set path
+            // Set path
             path = p;
-            // reset waypoint progress along the new path
+            // Reset waypoint progress along the new path
             currentWaypoint = 0;
         }
     }    
 
     // Follow the path
-    //
-    // TODO : Fix reachedEndOfPath flag to avoid out of index exceptions (waypoint is still incremented if endReachedDistance < nextWayPointDistance)
-    //
     private void PathFollow()
     {
         // If there's no path, return
         if (path == null) return;
 
-        // Has this object reached the destination yet (within this endReachedDistance radius)
+        // Has this object reached the destination yet (within this endReachedDistance radius, OR has reached the last waypoint in this path)
         distanceToEnd = Vector2.Distance(rb.position, Target.position);
-        if (distanceToEnd <= endReachedDistance && targetIsInSight)
+        if ((distanceToEnd <= endReachedDistance && targetIsInSight) || (currentWaypoint >= path.vectorPath.Count))
         {
             movement.StopMoving();
             isMoving = false;

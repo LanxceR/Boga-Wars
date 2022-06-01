@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7482595399496530621}
   - component: {fileID: 7482595399496530622}
   - component: {fileID: 7482595399496530616}
+  - component: {fileID: 6978162261747912523}
   m_Layer: 7
   m_Name: Enemy Kebab
   m_TagString: Enemy
@@ -383,6 +384,20 @@ MonoBehaviour:
   knockbackImmune: 0
   knockbackResist: 4
   recoveryTime: 0.5
+--- !u!114 &6978162261747912523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482595399496530614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d738e5c2a512584ab75ec90272ac7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  comps: []
 --- !u!1 &7482595399793381968
 GameObject:
   m_ObjectHideFlags: 0
