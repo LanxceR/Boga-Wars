@@ -26,6 +26,9 @@ public class ObjectPooler : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Instantiate bunch of pool objects at start
+        InstantiateObjects();
     }
     public static ObjectPooler GetInstance()
     {
@@ -35,8 +38,7 @@ public class ObjectPooler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Instantiate bunch of pool objects at start
-        InstantiateObjects();
+
     }
 
     // Update is called once per frame

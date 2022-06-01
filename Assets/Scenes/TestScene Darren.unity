@@ -6612,7 +6612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889699282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
@@ -25288,10 +25288,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Burger
       objectReference: {fileID: 0}
-    - target: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7774728846420634250, guid: 917896f3093752b489d31c83c518a3de, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -25413,11 +25409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165669676148542263, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.52
+      value: 2.269989
       objectReference: {fileID: 0}
     - target: {fileID: 2165669676148542263, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.39
+      value: -0.89001465
       objectReference: {fileID: 0}
     - target: {fileID: 2165669676148542263, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25454,10 +25450,6 @@ PrefabInstance:
     - target: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
       propertyPath: m_Name
       value: Enemy Pizza
-      objectReference: {fileID: 0}
-    - target: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
@@ -25667,10 +25659,6 @@ PrefabInstance:
     - target: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
       propertyPath: m_Name
       value: Enemy Kebab
-      objectReference: {fileID: 0}
-    - target: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482595399496530620, guid: 403156421b631604597a1e98ba31fd95, type: 3}
       propertyPath: m_RootOrder

@@ -52,7 +52,6 @@ public class Spawner : MonoBehaviour
         } 
         while (!hit);
 
-        // Instantiate enemy
         return Instantiate(GetEnemy(enemies), spawnPos, transform.rotation, enemyParent);
     }
 
@@ -109,22 +108,4 @@ public class Spawner : MonoBehaviour
 
         return null;
     }
-
-    //public void ClearEnemyList()
-    //{
-    //    // Clear enemy instances list
-    //    enemyList.Clear();
-    //}
-
-    //public void DestroyEnemies()
-    //{
-    //    // Fetch all current enemy clones in scene
-    //    foreach (GameObject enemy in enemyList)
-    //    {
-    //        Destroy(enemy);
-    //    }
-
-    //    // Clear enemy instances list
-    //    enemyList.Clear();
-    //}
 }
