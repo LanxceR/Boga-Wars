@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    private List<GameObject> enemyList;
+    // Singleton instance
+    private static Spawner instance;
+
     private Vector2 spawnPos;
     private bool hit;
 
-    [SerializeField] private CompositeCollider2D spawnArea;
+    // Awake is called when the script instance is being loaded
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
-    [Header("Enemy Settings")]
-    [SerializeField] private SpawnableObject[] enemies;
-    [SerializeField] private Transform enemyParent;
+    public static Spawner GetInstance()
+    {
+        return instance;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyList = new List<GameObject>();
-        SpawnEnemies(5, false);
+
     }
 
     // Update is called once per frame
@@ -27,7 +40,7 @@ public class Spawner : MonoBehaviour
         
     }
 
-    public void SpawnEnemies()
+    public GameObject SpawnEnemy(CompositeCollider2D spawnArea, Transform enemyParent, SpawnableObject[] enemies)
     {
         hit = false;
 
@@ -39,11 +52,15 @@ public class Spawner : MonoBehaviour
         } 
         while (!hit);
 
-        // Instantiate enemy and add to enemy list
-        enemyList.Add(Instantiate(GetEnemy(), spawnPos, transform.rotation, enemyParent));
+        // Instantiate enemy
+        return Instantiate(GetEnemy(enemies), spawnPos, transform.rotation, enemyParent);
     }
-    public void SpawnEnemies(int amountToSpawn, bool randomizeAmount)
+
+    public List<GameObject> SpawnEnemies(int amountToSpawn, bool randomizeAmount, CompositeCollider2D spawnArea, Transform enemyParent, SpawnableObject[] enemies)
     {
+        // Create a list to store enemies
+        List<GameObject> enemyList = new List<GameObject>();
+
         // If randomize amount, randomize the amount to spawmn
         if (randomizeAmount)
             amountToSpawn = Random.Range(1, amountToSpawn + 1);
@@ -51,8 +68,10 @@ public class Spawner : MonoBehaviour
         // Spawn enemy amountToSpawn times
         for (int i = 0; i < amountToSpawn; i++)
         {
-            SpawnEnemies();
+            enemyList.Add(SpawnEnemy(spawnArea, enemyParent, enemies));
         }
+
+        return enemyList;
     }
 
     private Vector2 GetRandomPosition(CompositeCollider2D area)
@@ -63,7 +82,7 @@ public class Spawner : MonoBehaviour
         return new Vector2(xPos, yPos);
     }
 
-    private GameObject GetEnemy()
+    private GameObject GetEnemy(SpawnableObject[] enemies)
     {
         // Calculate max limit of chances
         int limit = 0;
@@ -91,24 +110,21 @@ public class Spawner : MonoBehaviour
         return null;
     }
 
-    public void FillEnemies(List<GameObject> enemyList)
-    {
-        // Add all enemies to list
-        foreach (GameObject enemy in enemyList)
-        {
-            enemyList.Add(enemy);
-        }
-    }
+    //public void ClearEnemyList()
+    //{
+    //    // Clear enemy instances list
+    //    enemyList.Clear();
+    //}
 
-    public void ClearEnemies()
-    {
-        // Fetch all current enemy clones in scene
-        foreach (GameObject enemy in enemyList)
-        {
-            Destroy(enemy);
-        }
+    //public void DestroyEnemies()
+    //{
+    //    // Fetch all current enemy clones in scene
+    //    foreach (GameObject enemy in enemyList)
+    //    {
+    //        Destroy(enemy);
+    //    }
 
-        // Clear enemy instances list
-        enemyList.Clear();
-    }
+    //    // Clear enemy instances list
+    //    enemyList.Clear();
+    //}
 }

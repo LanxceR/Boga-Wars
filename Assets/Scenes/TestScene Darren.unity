@@ -1230,6 +1230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 664016054}
   - component: {fileID: 664016053}
+  - component: {fileID: 664016055}
   m_Layer: 0
   m_Name: Room 10x18
   m_TagString: Untagged
@@ -1268,6 +1269,32 @@ Transform:
   m_Father: {fileID: 1094857945}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &664016055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664016052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomIsCleared: 0
+  amountToSpawn: 5
+  randomizeSpawnAmount: 1
+  reinforcements: 1
+  randomizeReinforcements: 1
+  spawnArea: {fileID: 48836196}
+  enemyTypes:
+  - Rate: 50
+    Prefab: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
+  - Rate: 30
+    Prefab: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
+  - Rate: 20
+    Prefab: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
+  enemyList: []
 --- !u!1 &669736410
 GameObject:
   m_ObjectHideFlags: 0
@@ -6539,6 +6566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889699284}
   - component: {fileID: 889699283}
+  - component: {fileID: 889699285}
   m_Layer: 0
   m_Name: Room 32x32
   m_TagString: Untagged
@@ -6577,6 +6605,32 @@ Transform:
   m_Father: {fileID: 1094857945}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889699285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889699282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomIsCleared: 0
+  amountToSpawn: 5
+  randomizeSpawnAmount: 1
+  reinforcements: 1
+  randomizeReinforcements: 0
+  spawnArea: {fileID: 670354745}
+  enemyTypes:
+  - Rate: 50
+    Prefab: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
+  - Rate: 30
+    Prefab: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
+  - Rate: 20
+    Prefab: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
+  enemyList: []
 --- !u!1 &905525447
 GameObject:
   m_ObjectHideFlags: 0
@@ -25236,7 +25290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7774728846420634250, guid: 917896f3093752b489d31c83c518a3de, type: 3}
       propertyPath: m_RootOrder
@@ -25403,7 +25457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
@@ -25483,6 +25537,10 @@ PrefabInstance:
       propertyPath: spawnArea
       value: 
       objectReference: {fileID: 48836196}
+    - target: {fileID: 6125451194942218520, guid: d53cdcf6154f19442a0101a046c88acb, type: 3}
+      propertyPath: activeRoomEnemies
+      value: 
+      objectReference: {fileID: 664016055}
     - target: {fileID: 6125451194942218521, guid: d53cdcf6154f19442a0101a046c88acb, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -25612,7 +25670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7482595399496530620, guid: 403156421b631604597a1e98ba31fd95, type: 3}
       propertyPath: m_RootOrder

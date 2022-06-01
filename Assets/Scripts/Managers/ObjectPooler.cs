@@ -27,6 +27,10 @@ public class ObjectPooler : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public static ObjectPooler GetInstance()
+    {
+        return instance;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -68,12 +72,7 @@ public class ObjectPooler : MonoBehaviour
         }
         // Otherwise fetch nothing
         return null;
-    }
-
-    public static ObjectPooler GetInstance()
-    {
-        return instance;
-    }
+    }    
 
     // Deactivate all pooled objects
     public void DeactivateAllPoolObjects()

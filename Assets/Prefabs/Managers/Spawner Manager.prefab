@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e7a00cf3188b84a894a2bff67441f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeRoomEnemies: {fileID: 0}
   spawnArea: {fileID: 0}
+  enemyParent: {fileID: 6125451194942218521}
   enemies:
   - Rate: 50
     Prefab: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
@@ -51,4 +53,4 @@ MonoBehaviour:
     Prefab: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
   - Rate: 25
     Prefab: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
-  enemyParent: {fileID: 6125451194942218521}
+  enemyList: []
