@@ -11783,6 +11783,7 @@ GameObject:
   - component: {fileID: 8963518892872672673}
   - component: {fileID: 8963518892872672674}
   - component: {fileID: 1687182703134078924}
+  - component: {fileID: 3263303389091623961}
   m_Layer: 0
   m_Name: Room 24x24 6
   m_TagString: Untagged
@@ -11834,7 +11835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomIsCleared: 0
   amountToSpawn: 5
   randomizeSpawnAmount: 1
   reinforcements: 1
@@ -11848,6 +11848,26 @@ MonoBehaviour:
   - Rate: 20
     Prefab: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
   enemyList: []
+--- !u!114 &3263303389091623961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963518892872672672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c10508e2285484b86ea7f4764b6997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomHasBeenVisited: 0
+  roomIsCleared: 0
+  roomArea: {fileID: 0}
+  actorLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  entranceWalls: []
+  entranceDoors: []
 --- !u!1 &8963518892947212650
 GameObject:
   m_ObjectHideFlags: 0
