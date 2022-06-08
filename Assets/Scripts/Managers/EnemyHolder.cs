@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(RoomState))]
 public class EnemyHolder : MonoBehaviour
 {
+    private RoomState roomState;
     private List<GameObject> enemyObjects;
-
-    [Header("Room Status")]
-    public bool roomIsCleared = false;
 
     [Header("Spawn Settings")]
     [SerializeField] private int amountToSpawn;
@@ -25,25 +24,23 @@ public class EnemyHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        roomState = GetComponent<RoomState>();
         enemyList = new List<HealthSystem>();
         enemyObjects = new List<GameObject>();
 
         // Randomize reinforcements if neccesary
-        if (randomizeReinforcements)
-            reinforcements = Random.Range(1, reinforcements + 1);
-
-        // Spawn enemies at start
-        Spawn();
+        if (randomizeReinforcements && reinforcements != 0)
+            reinforcements = Random.Range(0, reinforcements + 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateRoomStatus();
+        UpdateStatusOfEnemies();
     }
 
     // Spawn Enemies
-    private void Spawn()
+    public void Spawn()
     {
         // Call Spawner to spawn enemies and store in this gameobject
         enemyObjects = Spawner.GetInstance().SpawnEnemies(amountToSpawn, randomizeSpawnAmount, spawnArea, transform, enemyTypes);
@@ -51,8 +48,10 @@ public class EnemyHolder : MonoBehaviour
     }
 
     // Check if there's reinforcements available or set room as cleared
-    private void UpdateRoomStatus()
+    private void UpdateStatusOfEnemies()
     {
+        if (!roomState.roomIsInCombat) return;
+
         if (AreAllEnemiesDead())
         {
             if (reinforcements > 0)
@@ -65,7 +64,8 @@ public class EnemyHolder : MonoBehaviour
             }
             else
             {
-                roomIsCleared = true;
+                roomState.roomIsInCombat = false;
+                roomState.roomIsCleared = true;
             }
         }
     }
