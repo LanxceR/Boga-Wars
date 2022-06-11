@@ -42,8 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // Find a player object if there's already one in scene from the start
-        ActivePlayer = FindObjectOfType<PlayerMovement>().gameObject;
+        FindPlayer();
         if (ActivePlayer)
         {
             // If there is one, also add the player to camera's target group
@@ -101,6 +100,17 @@ public class GameManager : MonoBehaviour
             {
                 behaviour.enabled = true;
             }
+        }
+    }
+
+    private void FindPlayer()
+    {
+        // Find a player object if there's already one in scene from the start
+        var activePlayer = FindObjectOfType<PlayerMovement>();
+
+        if (activePlayer)
+        {
+            ActivePlayer = activePlayer.gameObject;
         }
     }
 

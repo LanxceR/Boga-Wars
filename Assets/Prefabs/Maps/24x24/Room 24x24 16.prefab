@@ -1266,46 +1266,14 @@ CompositeCollider2D:
         Y: -20000000
       - X: 20000000
         Y: -20000000
-    - - X: -39999900
-        Y: -60000041
-      - X: -39999900
-        Y: -60000000
-      - X: 39999900
-        Y: -60000000
-      - X: 39999900
-        Y: -60000041
-      - X: 39999959
-        Y: -60000100
-      - X: 80000041
-        Y: -60000100
-      - X: 80000100
-        Y: -60000041
-      - X: 80000100
-        Y: -29999959
-      - X: 80000041
-        Y: -29999900
-      - X: 39999959
-        Y: -29999900
-      - X: 39999900
-        Y: -29999959
-      - X: 39999900
+    - - X: 80000000
         Y: -30000000
-      - X: -39999900
+      - X: -80000000
         Y: -30000000
-      - X: -39999900
-        Y: -29999959
-      - X: -39999959
-        Y: -29999900
-      - X: -80000041
-        Y: -29999900
-      - X: -80000100
-        Y: -29999959
-      - X: -80000100
-        Y: -60000041
-      - X: -80000041
-        Y: -60000100
-      - X: -39999959
-        Y: -60000100
+      - X: -80000000
+        Y: -60000000
+      - X: 80000000
+        Y: -60000000
   m_CompositePaths:
     m_Paths:
     - - {x: 3.999971, y: 4}
@@ -1316,10 +1284,10 @@ CompositeCollider2D:
       - {x: 1.9999708, y: 3}
       - {x: -2, y: 2.999971}
       - {x: -1.9999708, y: -2}
-    - - {x: 7.999981, y: -6.0000043}
-      - {x: 7.9999747, y: -2.99999}
-      - {x: -8.00001, y: -3.0000253}
-      - {x: -7.999981, y: -6.0000043}
+    - - {x: 7.9999704, y: -6}
+      - {x: 7.9999704, y: -3}
+      - {x: -8, y: -3.0000293}
+      - {x: -7.9999704, y: -6}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &469697534770112282
@@ -5277,14 +5245,6 @@ CompositeCollider2D:
         Y: 10000000
       - X: -110000000
         Y: 10000000
-    - - X: -40000000
-        Y: 80000000
-      - X: -80000000
-        Y: 80000000
-      - X: -80000000
-        Y: 44375000
-      - X: -40000000
-        Y: 44375000
     - - X: 80000000
         Y: 80000000
       - X: 40000000
@@ -5292,6 +5252,14 @@ CompositeCollider2D:
       - X: 40000000
         Y: 44375000
       - X: 80000000
+        Y: 44375000
+    - - X: -40000000
+        Y: 80000000
+      - X: -80000000
+        Y: 80000000
+      - X: -80000000
+        Y: 44375000
+      - X: -40000000
         Y: 44375000
     - - X: 120000000
         Y: -10000000
@@ -5317,58 +5285,14 @@ CompositeCollider2D:
         Y: -120000000
       - X: -10000000
         Y: -120000000
-    - - X: -49999900
-        Y: -75625041
-      - X: -49999900
-        Y: -75625000
-      - X: 49999900
-        Y: -75625000
-      - X: 49999900
-        Y: -75625041
-      - X: 49999959
-        Y: -75625100
-      - X: 80000041
-        Y: -75625100
-      - X: 80000100
-        Y: -75625041
-      - X: 80000100
-        Y: -59999959
-      - X: 80000041
-        Y: -59999900
-      - X: 49999959
-        Y: -59999900
-      - X: 49999900
-        Y: -59999959
-      - X: 49999900
-        Y: -60000100
-      - X: 39999959
-        Y: -60000100
-      - X: 39999900
-        Y: -60000041
-      - X: 39999900
+    - - X: 80000000
         Y: -60000000
-      - X: -39999900
+      - X: -80000000
         Y: -60000000
-      - X: -39999900
-        Y: -60000041
-      - X: -39999959
-        Y: -60000100
-      - X: -49999900
-        Y: -60000100
-      - X: -49999900
-        Y: -59999959
-      - X: -49999959
-        Y: -59999900
-      - X: -80000041
-        Y: -59999900
-      - X: -80000100
-        Y: -59999959
-      - X: -80000100
-        Y: -75625041
-      - X: -80000041
-        Y: -75625100
-      - X: -49999959
-        Y: -75625100
+      - X: -80000000
+        Y: -75625000
+      - X: 80000000
+        Y: -75625000
   m_CompositePaths:
     m_Paths:
     - - {x: 11.99997, y: 1}
@@ -5403,10 +5327,10 @@ CompositeCollider2D:
       - {x: -11.00003, y: -1}
       - {x: -12, y: -1.0000293}
       - {x: -11.99997, y: -12}
-    - - {x: 7.999981, y: -7.5625043}
-      - {x: 7.9999747, y: -5.99999}
-      - {x: -8.00001, y: -6.0000253}
-      - {x: -7.999981, y: -7.5625043}
+    - - {x: 7.9999704, y: -7.5625}
+      - {x: 7.9999704, y: -6}
+      - {x: -8, y: -6.000029}
+      - {x: -7.9999704, y: -7.5625}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &469697535151212431
@@ -10735,7 +10659,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764806279566694533}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: d48912bc20bb22e46a528a35431001e2, type: 2}
   m_CullingMode: 0
@@ -11025,17 +10949,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 4302497783395011511}
-    m_ColliderPaths:
-    - - X: -10000000
-        Y: -120000000
-      - X: 10000000
-        Y: -120000000
-      - X: 10000000
-        Y: -110000000
-      - X: -10000000
-        Y: -110000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 0.99997073, y: -12}
@@ -11408,7 +11322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1754532663827444940
 Transform:
   m_ObjectHideFlags: 0
@@ -11551,7 +11465,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2310951743731128313}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -12171,17 +12085,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2379219875604361484}
-    m_ColliderPaths:
-    - - X: 10000000
-        Y: 120000000
-      - X: -10000000
-        Y: 120000000
-      - X: -10000000
-        Y: 104375000
-      - X: 10000000
-        Y: 104375000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 0.99997073, y: 10.4375}
@@ -12366,7 +12270,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2310951743731128313}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -12559,7 +12463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7980196931050063767
 Transform:
   m_ObjectHideFlags: 0
@@ -14137,7 +14041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5879609367794412066
 Transform:
   m_ObjectHideFlags: 0
@@ -14313,7 +14217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4439223509746371412
 Transform:
   m_ObjectHideFlags: 0
@@ -14898,7 +14802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4236736375515241968
 Transform:
   m_ObjectHideFlags: 0
@@ -15041,7 +14945,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2310951743731128313}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -20494,7 +20398,17 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 7652448655966927750}
+    m_ColliderPaths:
+    - - X: 120000000
+        Y: -10000000
+      - X: 120000000
+        Y: 20000000
+      - X: 110000000
+        Y: 20000000
+      - X: 110000000
+        Y: -10000000
   m_CompositePaths:
     m_Paths:
     - - {x: 11.99997, y: -1}
@@ -20809,7 +20723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7920661137388275202
 Transform:
   m_ObjectHideFlags: 0
@@ -20965,7 +20879,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2310951743731128313}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1

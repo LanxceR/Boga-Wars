@@ -9,9 +9,9 @@ public class EnemyHolder : MonoBehaviour
     private List<GameObject> enemyObjects;
 
     [Header("Spawn Settings")]
-    [SerializeField] private int amountToSpawn;
+    public int amountToSpawn;
     [SerializeField] private bool randomizeSpawnAmount = true;
-    [SerializeField] private int reinforcements;
+    public int reinforcements;
     [SerializeField] private bool randomizeReinforcements = true;
 
     [Header("Spawn Area")]
@@ -54,7 +54,7 @@ public class EnemyHolder : MonoBehaviour
 
         if (AreAllEnemiesDead())
         {
-            if (reinforcements > 0)
+            if (reinforcements > 0 && amountToSpawn > 0)
             {
                 // When all enemies are dead, spawn reinforcements (if there are any)
                 Spawn();
@@ -62,10 +62,9 @@ public class EnemyHolder : MonoBehaviour
                 // Count down reinforcements left count
                 reinforcements--;
             }
-            else
+            else 
             {
-                roomState.roomIsInCombat = false;
-                roomState.roomIsCleared = true;
+                roomState.ClearRoom();
             }
         }
     }

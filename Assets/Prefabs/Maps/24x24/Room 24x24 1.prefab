@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4417217406198334232
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5770390301991391864}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2600769250458070819
 Transform:
   m_ObjectHideFlags: 0
@@ -5218,28 +5218,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1861226811519999690}
     m_ColliderPaths:
-    - - X: 110000041
-        Y: 100000100
-      - X: -110000041
-        Y: 100000100
-      - X: -110000100
-        Y: 100000041
-      - X: -110000100
-        Y: -110000041
-      - X: -110000041
-        Y: -110000100
-      - X: 110000041
-        Y: -110000100
-      - X: 110000100
-        Y: -110000041
-      - X: 110000100
-        Y: 100000041
+    - - X: 110000000
+        Y: -110000000
+      - X: 110000000
+        Y: 100000000
+      - X: -110000000
+        Y: 100000000
+      - X: -110000000
+        Y: -110000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 10.999974, y: -11.00001}
-      - {x: 10.999974, y: 10.00001}
-      - {x: -11.00001, y: 9.999974}
-      - {x: -10.999974, y: -11.00001}
+    - - {x: 10.99997, y: -11}
+      - {x: 10.99997, y: 10}
+      - {x: -11, y: 9.99997}
+      - {x: -10.99997, y: -11}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &1137915324507146692
@@ -5698,7 +5690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5370972673771704202
 Transform:
   m_ObjectHideFlags: 0
@@ -5841,7 +5833,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5770390301991391864}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -5969,7 +5961,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2440731340847581749}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: d48912bc20bb22e46a528a35431001e2, type: 2}
   m_CullingMode: 0
@@ -6279,13 +6271,23 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 5276213389892538371}
+    m_ColliderPaths:
+    - - X: 10000000
+        Y: 120000000
+      - X: -10000000
+        Y: 120000000
+      - X: -10000000
+        Y: 104375000
+      - X: 10000000
+        Y: 104375000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.9999748, y: 10.4374895}
-      - {x: 0.9999748, y: 12.00001}
-      - {x: -1.00001, y: 11.999974}
-      - {x: -0.9999748, y: 10.4374895}
+    - - {x: 0.99997073, y: 10.4375}
+      - {x: 0.99997073, y: 12}
+      - {x: -1, y: 11.99997}
+      - {x: -0.99997073, y: 10.4375}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &2486228762291230885
@@ -7249,7 +7251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8262620282764201578
 Transform:
   m_ObjectHideFlags: 0
@@ -7535,17 +7537,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 903290894575185209}
-    m_ColliderPaths:
-    - - X: -10000000
-        Y: -120000000
-      - X: 10000000
-        Y: -120000000
-      - X: 10000000
-        Y: -110000000
-      - X: -10000000
-        Y: -110000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 0.99997073, y: -12}
@@ -17867,7 +17859,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5770390301991391864}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -18079,7 +18071,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5770390301991391864}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1

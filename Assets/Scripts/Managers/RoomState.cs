@@ -59,15 +59,15 @@ public class RoomState : MonoBehaviour
                 // Room has been visited
                 roomHasBeenVisited = true;
 
-                if ((!enemyHolder || !enemyHolder.enabled) || roomIsCleared)
+                if (!enemyHolder || 
+                    !enemyHolder.enabled ||
+                    enemyHolder.amountToSpawn <= 0 ||
+                    roomIsCleared)
                 {
                     // Room is automatically cleared if enemyHolder is not activated
-                    roomIsCleared = true;
-
-                    // Mark this room not in active combat (because there is no enemies to begin with)
-                    roomIsInCombat = false;
+                    ClearRoom();
                 } 
-                else
+                else if (enemyHolder.amountToSpawn != 0)
                 {
                     // If there is enemy, close all doors
                     LockAllDoors();
@@ -104,5 +104,14 @@ public class RoomState : MonoBehaviour
         {
             door.GetComponent<Collider2D>().isTrigger = true;
         }
+    }
+
+    public void ClearRoom()
+    {
+        // Room is cleared
+        roomIsCleared = true;
+
+        // Mark this room not in active combat (because there is no enemies to begin with)
+        roomIsInCombat = false;
     }
 }
