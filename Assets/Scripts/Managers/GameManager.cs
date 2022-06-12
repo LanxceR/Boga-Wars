@@ -23,12 +23,14 @@ public class GameManager : MonoBehaviour
     [Header("States")]
     public bool IsPlaying = false; // Bool to determine if player is in menu or playing the game
 
-    // Subbed at: LevelMenuUI.cs
+    // Subbed at: 
     public UnityAction OnPauseAction;
-    // Subbed at: LevelMenuUI.cs
+    // Subbed at: 
     public UnityAction OnResumeAction;
-    // Subbed at: LevelMenuUI.cs
+    // Subbed at: 
     public UnityAction OnLevelComplete;
+    // Subbed at: InGameHUD.cs
+    public UnityAction OnRoomClear;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -118,7 +120,12 @@ public class GameManager : MonoBehaviour
     {
         FollowMouse aimHelper = player.GetComponentInChildren<FollowMouse>();
 
-        GameVcamTargetGroup.AddMember(ActivePlayer.transform, 0.75f, 0f);
-        GameVcamTargetGroup.AddMember(aimHelper.transform, 0.25f, 0f);
+        GameVcamTargetGroup.AddMember(ActivePlayer.transform, 0.70f, 0f);
+        GameVcamTargetGroup.AddMember(aimHelper.transform, 0.30f, 0f);
+    }
+
+    public void RoomClear()
+    {
+        OnRoomClear?.Invoke();
     }
 }
