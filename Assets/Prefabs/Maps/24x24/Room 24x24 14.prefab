@@ -1802,7 +1802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3660021871239161113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.5, z: 0}
+  m_LocalPosition: {x: 0, y: 11.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4686964035729656146}
@@ -2111,7 +2111,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1 &3766169319733797301
@@ -2287,7 +2287,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1 &3921670413419436206
@@ -2429,7 +2429,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1 &3982676327004613464
@@ -14098,15 +14098,7 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 4454743214384831763}
     m_ColliderPaths:
-    - - X: 120000100
-        Y: 14374959
-      - X: 120000100
-        Y: 20000041
-      - X: 120000041
-        Y: 20000100
-      - X: 120000000
-        Y: 20000100
-      - X: 120000000
+    - - X: 120000000
         Y: 120000000
       - X: 10000000
         Y: 120000000
@@ -14115,26 +14107,10 @@ CompositeCollider2D:
       - X: 110000000
         Y: 104375000
       - X: 110000000
-        Y: 20000100
-      - X: 109999959
-        Y: 20000100
-      - X: 109999900
-        Y: 20000041
-      - X: 109999900
-        Y: 14374959
-      - X: 109999959
-        Y: 14374900
-      - X: 120000041
-        Y: 14374900
-    - - X: -109999900
-        Y: 14374959
-      - X: -109999900
-        Y: 20000041
-      - X: -109999959
-        Y: 20000100
-      - X: -110000000
-        Y: 20000100
-      - X: -110000000
+        Y: 14375000
+      - X: 120000000
+        Y: 14375000
+    - - X: -110000000
         Y: 104375000
       - X: -10000000
         Y: 104375000
@@ -14143,17 +14119,9 @@ CompositeCollider2D:
       - X: -120000000
         Y: 120000000
       - X: -120000000
-        Y: 20000100
-      - X: -120000041
-        Y: 20000100
-      - X: -120000100
-        Y: 20000041
-      - X: -120000100
-        Y: 14374959
-      - X: -120000041
-        Y: 14374900
-      - X: -109999959
-        Y: 14374900
+        Y: 14375000
+      - X: -110000000
+        Y: 14375000
     - - X: -30000000
         Y: 80000000
       - X: -70000000
@@ -14228,18 +14196,18 @@ CompositeCollider2D:
         Y: -75625000
   m_CompositePaths:
     m_Paths:
-    - - {x: 11.999974, y: 1.43749}
+    - - {x: 11.99997, y: 1.4375}
       - {x: 11.99997, y: 12}
       - {x: 1, y: 11.99997}
       - {x: 1.0000293, y: 10.4375}
       - {x: 11, y: 10.43747}
-      - {x: 11.000026, y: 1.43749}
-    - - {x: -11.000026, y: 1.43749}
+      - {x: 11.00003, y: 1.4375}
+    - - {x: -11.00003, y: 1.4375}
       - {x: -10.99997, y: 10.4375}
       - {x: -1, y: 10.43753}
       - {x: -1.0000293, y: 12}
       - {x: -12, y: 11.99997}
-      - {x: -11.999974, y: 1.43749}
+      - {x: -11.99997, y: 1.4375}
     - - {x: 6.9999704, y: 6.4375}
       - {x: 6.9999704, y: 8}
       - {x: 3, y: 7.9999704}
@@ -15920,7 +15888,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1 &7194738608169688107
