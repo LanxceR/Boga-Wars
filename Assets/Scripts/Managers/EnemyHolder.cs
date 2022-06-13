@@ -65,6 +65,9 @@ public class EnemyHolder : MonoBehaviour
             else 
             {
                 roomState.ClearRoom();
+
+                // Invoke UnityAction OnRoomClear in GameManager
+                GameManager.GetInstance().RoomClear();
             }
         }
     }
