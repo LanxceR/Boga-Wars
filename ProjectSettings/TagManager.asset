@@ -16,12 +16,12 @@ TagManager:
   - Background
   - Water
   - UI
-  - Wall
+  - Obstacle
   - Actor
   - Corpse
   - Invulnerable
   - Projectile
-  - 
+  - Low Obstacle
   - 
   - 
   - 
