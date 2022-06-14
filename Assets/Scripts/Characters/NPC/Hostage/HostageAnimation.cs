@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum HostageState
+public enum HostageAnimState
 {
     IDLE, RUN
 }
@@ -10,6 +10,8 @@ public enum HostageState
 public class HostageAnimation : MonoBehaviour
 {
     private Animator anim;
+
+    [SerializeField] private HostageState hostageState;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +22,14 @@ public class HostageAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TriggerCheer()
     {
-        anim.SetTrigger("Cheer");
+        if (!hostageState.hasBeenRescued)
+        {
+            anim.SetTrigger("Cheer");
+        }
     }
 }

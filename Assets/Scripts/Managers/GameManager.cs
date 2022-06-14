@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public UnityAction OnLevelComplete;
     // Subbed at: InGameHUD.cs
     public UnityAction OnRoomClear;
+    // Subbed at: InGameHUD.cs
+    public UnityAction OnHostageRescued;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -127,5 +129,9 @@ public class GameManager : MonoBehaviour
     public void RoomClear()
     {
         OnRoomClear?.Invoke();
+    }
+    public void HostageRescued()
+    {
+        OnHostageRescued?.Invoke();
     }
 }

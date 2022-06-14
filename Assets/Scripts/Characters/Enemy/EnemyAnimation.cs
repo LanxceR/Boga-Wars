@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyState
+public enum EnemyAnimState
 {
     IDLE, RUN, DEAD
 }
@@ -51,20 +51,20 @@ public class EnemyAnimation : MonoBehaviour
 
     private void UpdateAnimationState()
     {
-        EnemyState state;
+        EnemyAnimState state;
 
 
         if (health.isDead)
         {
-            state = EnemyState.DEAD;
+            state = EnemyAnimState.DEAD;
         }
         else if (enemyAIMove.isMoving)
         {
-            state = EnemyState.RUN;
+            state = EnemyAnimState.RUN;
         }
         else
         {
-            state = EnemyState.IDLE;
+            state = EnemyAnimState.IDLE;
         }
 
         anim.SetInteger("State", (int)state);
