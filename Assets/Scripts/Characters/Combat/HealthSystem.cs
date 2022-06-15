@@ -34,6 +34,9 @@ public class HealthSystem : MonoBehaviour
     public UnityEvent OnHit;
     public UnityEvent OnHealthReachZero;
 
+    [Header("Misc")]
+    public GameObject lastHitBy;
+
     // Awake is called when the script instance is being loaded
     private void Awake()
     {
@@ -63,6 +66,9 @@ public class HealthSystem : MonoBehaviour
     // Take damage
     public void TakeDamage(GameObject attacker, float damage)
     {
+        // Set last hit by attacker
+        lastHitBy = attacker;
+
         // If invincible or dead, return
         if (isInvulnerable || isDead) return;
 
@@ -83,11 +89,20 @@ public class HealthSystem : MonoBehaviour
         }
         else if (!isDead) // Prevent entity from dying again after its already dead
         {
+            // Dies
             isDead = true;
             OnHealthReachZero?.Invoke();
+
+            if (gameObject.tag == "Player")
+            {
+                // If player dies, game over
+                GameManager.GetInstance().GameOver(lastHitBy);
+                // Restart
+                GameSceneManager.GetInstance().GotoSceneWithDelay(SceneName.STAGE_ONE, 5f);
+            }
         }
 
-        Debug.Log($"{gameObject.name} took {damage} damage from {attacker.name}");
+        Debug.Log($"{gameObject.name} took {damage} damage from {lastHitBy.name}");
     }
 
     public void AddHealth(float value)

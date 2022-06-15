@@ -15,7 +15,7 @@ public class GameSceneManager : MonoBehaviour
     private static GameSceneManager instance;
 
     [SerializeField] private Animator animator;
-    [SerializeField] private SceneName defaultScene;
+    [SerializeField] private SceneName defaultSceneTarget;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -46,7 +46,7 @@ public class GameSceneManager : MonoBehaviour
     }
     public void GotoScene()
     {
-        StartCoroutine(LoadSceneCoroutine(defaultScene, 0));
+        StartCoroutine(LoadSceneCoroutine(defaultSceneTarget, 0));
     }
 
     // Go to scene with delay
@@ -60,7 +60,7 @@ public class GameSceneManager : MonoBehaviour
     }
     public void GotoSceneWithDelay(float delay)
     {
-        StartCoroutine(LoadSceneCoroutine(defaultScene, delay));
+        StartCoroutine(LoadSceneCoroutine(defaultSceneTarget, delay));
     }
 
     // Reload scene
