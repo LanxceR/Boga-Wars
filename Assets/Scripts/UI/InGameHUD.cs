@@ -59,7 +59,7 @@ public class InGameHUD : MonoBehaviour
         {
             successTextFade.SetAlpha(1f);
             successTextFade.DoBlink(3, 0.5f, 0.25f);
-            successTextFade.DoFadeOut(1f, 10f);
+            successTextFade.DoFadeOut(1f, 5f);
         }
     }
 }

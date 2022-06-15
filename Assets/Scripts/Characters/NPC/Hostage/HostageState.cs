@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HostageState : MonoBehaviour
 {
+    [Header("States")]
     public bool hasBeenRescued = false;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class HostageState : MonoBehaviour
         if (!hasBeenRescued)
         {
             GameManager.GetInstance().HostageRescued();
+            GameSceneManager.GetInstance().GotoSceneWithDelay(5f);
             hasBeenRescued = true;
         }
         else
