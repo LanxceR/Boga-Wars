@@ -47,12 +47,12 @@ public class UIFade : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            this.canvasGroup.alpha = Mathf.Lerp(1, 0, elapsed / duration);
+            SetAlpha(Mathf.Lerp(1, 0, elapsed / duration));
 
             yield return null;
         }
 
-        this.canvasGroup.alpha = 0f;
+        SetAlpha(0f);
     }
 
     public void DoFadeIn(float duration)
@@ -68,11 +68,28 @@ public class UIFade : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            this.canvasGroup.alpha = Mathf.Lerp(0, 1, elapsed / duration);
+            SetAlpha(Mathf.Lerp(0, 1, elapsed / duration));
 
             yield return null;
         }
 
-        this.canvasGroup.alpha = 1f;
+        SetAlpha(1f);
+    }
+
+    public void DoBlink(int blinkAmount, float blinkInterval, float delay)
+    {
+        StartCoroutine(Blink(blinkAmount, blinkInterval, delay));
+    }
+    private IEnumerator Blink(int blinkAmount, float blinkInterval, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        for (int i = 0; i < blinkAmount; i++)
+        {
+            SetAlpha(0f);
+            yield return new WaitForSeconds(blinkInterval/2);
+            SetAlpha(1f);
+            yield return new WaitForSeconds(blinkInterval/2);
+        }
     }
 }

@@ -11,6 +11,11 @@ public class RoomState : MonoBehaviour
 {
     private EnemyHolder enemyHolder;
 
+    [Header("Room Identifier")]
+    public bool playerSpawnRoom = false;
+    public bool exitRoom = false;
+    public bool hostageRoom = false;
+
     [Header("Room Status")]
     public bool roomIsInCombat = false;
     public bool roomHasBeenVisited = false;
