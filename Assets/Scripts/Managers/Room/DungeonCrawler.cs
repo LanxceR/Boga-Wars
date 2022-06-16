@@ -2,25 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DungeonCrawler : MonoBehaviour
+public class DungeonCrawler
 {
     public Vector2Int Position { get; set; }
 
     public DungeonCrawler(Vector2Int startPos)
     {
         Position = startPos;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // Get next position based on direction

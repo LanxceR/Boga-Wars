@@ -52,12 +52,7 @@ public class RoomController : MonoBehaviour
         // If another room already exists in (x, y), then stop
         if (DoesRoomExist(x, y)) return;
 
-        room.transform.localPosition = new Vector3(x * room.width, y * room.height);
-        room.name = SetRoomName(room);
-        room.idX = x;
-        room.idY = y;
-
-        LoadRoom(room);
+        LoadRoom(room, x, y);
     }
 
     public void LoadRoom(RoomState room)
@@ -65,6 +60,18 @@ public class RoomController : MonoBehaviour
         RoomState loadedRoom = Instantiate(room, transform);
 
         loadedRoom.name = SetRoomName(loadedRoom);
+
+        // Add to loaded rooms list
+        loadedRooms.Add(loadedRoom);
+    }
+    public void LoadRoom(RoomState room, int x, int y)
+    {
+        RoomState loadedRoom = Instantiate(room, transform);
+
+        loadedRoom.name = SetRoomName(loadedRoom);
+        loadedRoom.transform.localPosition = new Vector3(x * room.width, y * room.height);
+        loadedRoom.idX = x;
+        loadedRoom.idY = y;
 
         // Add to loaded rooms list
         loadedRooms.Add(loadedRoom);
