@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Player Spawn")]
     public Transform SpawnPoint;
-    private bool playerIsSpawning;
+    [SerializeField] private bool spawnPointSet = false;
 
     [Header("States")]
     public bool IsPlaying = false; // Bool to determine if player is in menu or playing the game
@@ -54,8 +54,6 @@ public class GameManager : MonoBehaviour
             // If there is one, also add the player to camera's target group
             SetVcamTargetGroup(ActivePlayer);
         }
-
-        StartGame();
     }
 
     // Get singleton instance

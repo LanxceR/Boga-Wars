@@ -15,7 +15,7 @@ public class UIHealthBar : MonoBehaviour
     void Start()
     {
         // Fetch playerHealth
-        playerHealth = GameManager.GetInstance().ActivePlayer.GetComponent<HealthSystem>();
+        StartCoroutine(FetchPlayerHealth());
 
         // Call init method
         InitializeHealthbar();
@@ -26,6 +26,19 @@ public class UIHealthBar : MonoBehaviour
     {
         // Call healthbar update method
         UpdateHealthbar();
+    }
+
+    private IEnumerator FetchPlayerHealth()
+    {
+        while (!GameManager.GetInstance().ActivePlayer)
+        {
+            yield return null;
+        }
+
+        while (!GameManager.GetInstance().ActivePlayer.TryGetComponent<HealthSystem>(out playerHealth))
+        {
+            yield return null;
+        }
     }
 
     private void InitializeHealthbar()

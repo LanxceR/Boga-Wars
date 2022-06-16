@@ -21178,7 +21178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToSpawn: 0
+  amountToSpawn: 6
   randomizeSpawnAmount: 0
   reinforcements: 0
   randomizeReinforcements: 0
@@ -21213,6 +21213,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 1459095032788591885}
   - {fileID: 6511108258426833955}
@@ -63186,10 +63188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToSpawn: 0
-  randomizeSpawnAmount: 0
-  reinforcements: 0
-  randomizeReinforcements: 0
+  amountToSpawn: 4
+  randomizeSpawnAmount: 1
+  reinforcements: 1
+  randomizeReinforcements: 1
   spawnArea: {fileID: 5040416194496674066}
   enemyTypes:
   - Rate: 50
@@ -63221,6 +63223,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 2451654568365468082}
   - {fileID: 6826438299214732378}
@@ -67265,6 +67269,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 7731079827974376234}
   - {fileID: 722121117490783212}
@@ -75699,6 +75705,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 5222218897932787195}
   - {fileID: 5474902387584995298}
@@ -93053,6 +93061,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 2446909955273294522}
   - {fileID: 6728683103561985251}
@@ -99251,7 +99261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c10508e2285484b86ea7f4764b6997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpawnRoom: 0
+  playerSpawnRoom: 1
   exitRoom: 0
   hostageRoom: 0
   roomIsInCombat: 0
@@ -99261,6 +99271,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 1442022527987771933}
   - {fileID: 992122801306329393}
@@ -127927,10 +127939,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToSpawn: 0
-  randomizeSpawnAmount: 0
-  reinforcements: 0
-  randomizeReinforcements: 0
+  amountToSpawn: 5
+  randomizeSpawnAmount: 1
+  reinforcements: 1
+  randomizeReinforcements: 1
   spawnArea: {fileID: 6766594275936538974}
   enemyTypes:
   - Rate: 50
@@ -127962,6 +127974,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  Width: 24
+  Height: 24
   entranceWalls:
   - {fileID: 5211154743624668162}
   - {fileID: 7604604739312220838}
