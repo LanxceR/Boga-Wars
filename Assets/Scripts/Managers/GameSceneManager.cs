@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public enum SceneName
 {
     STAGE_ONE,
+    STAGE_TWO,
+    STAGE_THREE,
     TEST_LEVEL_D,
     TEST_LEVEL_B
 }
