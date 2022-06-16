@@ -2005,8 +2005,8 @@ Tilemap:
   - first: {x: 11, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2015,8 +2015,8 @@ Tilemap:
   - first: {x: 11, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2025,8 +2025,8 @@ Tilemap:
   - first: {x: 11, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2035,8 +2035,8 @@ Tilemap:
   - first: {x: 11, y: 2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2044,11 +2044,15 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: 8b413127e63fed840b07ffe729395e77, type: 2}
+    m_Data: {fileID: 11400000, guid: e9155d0be2878e64ebdeeed511711e3d, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
-    m_Data: {fileID: -649988697683165430, guid: cdeb45b55f4a7994b991c3df90c0337e, type: 3}
+    m_Data: {fileID: 6492995221339435176, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -2944,8 +2948,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.4}
-    oldSize: {x: 2, y: 2.5}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7999,6 +8003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c10508e2285484b86ea7f4764b6997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpawnRoom: 0
+  exitRoom: 0
+  hostageRoom: 0
   roomIsInCombat: 0
   roomHasBeenVisited: 0
   roomIsCleared: 0
@@ -20266,8 +20273,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.4}
-    oldSize: {x: 2, y: 2.5}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
