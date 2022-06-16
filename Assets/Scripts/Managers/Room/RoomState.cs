@@ -15,6 +15,8 @@ public class RoomState : MonoBehaviour
     public bool playerSpawnRoom = false;
     public bool exitRoom = false;
     public bool hostageRoom = false;
+    public int idX;
+    public int idY;
 
     [Header("Room Status")]
     public bool roomIsInCombat = false;
@@ -24,6 +26,10 @@ public class RoomState : MonoBehaviour
     [Header("Room Area")]
     [SerializeField] private CompositeCollider2D roomArea;
     [SerializeField] private LayerMask actorLayerMask = 1<<7;
+
+    [Header("Room Prefab Setting")]
+    public float width = 24f;
+    public float height = 24f;
 
     [Header("Entrances")]
     [SerializeField] private List<GameObject> entranceWalls;
@@ -109,6 +115,70 @@ public class RoomState : MonoBehaviour
         {
             door.GetComponent<Collider2D>().isTrigger = true;
         }
+    }
+
+    public void SetEntrances()
+    {
+        // First, deactivate all doors and activate all walls
+        foreach (GameObject door in entranceDoors)
+        {
+            door.SetActive(false);
+        }
+
+        foreach (GameObject walls in entranceWalls)
+        {
+            walls.SetActive(true);
+        }
+
+        // Then, check for neighboring rooms
+        // If there's one on a side, deactivate that side's wall and activate that side's door
+        if (GetNeigboringRoom(RoomSide.NORTH))
+        {
+            entranceDoors[(int)RoomSide.NORTH].SetActive(true);
+            entranceWalls[(int)RoomSide.NORTH].SetActive(false);
+        }
+        if (GetNeigboringRoom(RoomSide.WEST))
+        {
+            entranceDoors[(int)RoomSide.WEST].SetActive(true);
+            entranceWalls[(int)RoomSide.WEST].SetActive(false);
+        }
+        if (GetNeigboringRoom(RoomSide.EAST))
+        {
+            entranceDoors[(int)RoomSide.EAST].SetActive(true);
+            entranceWalls[(int)RoomSide.EAST].SetActive(false);
+        }
+        if (GetNeigboringRoom(RoomSide.SOUTH))
+        {
+            entranceDoors[(int)RoomSide.SOUTH].SetActive(true);
+            entranceWalls[(int)RoomSide.SOUTH].SetActive(false);
+        }
+    }
+
+    private RoomState GetNeigboringRoom(RoomSide side)
+    {
+        int x = 0;
+        int y = 0;
+        switch (side)
+        {
+            case RoomSide.NORTH:
+                y = 1;
+                break;
+            case RoomSide.WEST:
+                x = -1;
+                break;
+            case RoomSide.EAST:
+                x = 1;
+                break;
+            case RoomSide.SOUTH:
+                y = -1;
+                break;
+        }
+
+        if (RoomController.GetInstance().DoesRoomExist(idX + x, idY + y))
+        {
+            return RoomController.GetInstance().FindRoom(idX + x, idY + y);
+        }
+        return null;
     }
 
     public void ClearRoom()

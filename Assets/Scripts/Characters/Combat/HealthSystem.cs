@@ -37,18 +37,12 @@ public class HealthSystem : MonoBehaviour
     [Header("Misc")]
     public GameObject lastHitBy;
 
-    // Awake is called when the script instance is being loaded
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         currentHealth = maxHealth;
         defaultColor = spriteRenderers[0].color;
         defaultLayerMask = 1 << gameObject.layer;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame

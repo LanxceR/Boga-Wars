@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Player Spawn")]
     public Transform SpawnPoint;
-    private bool playerIsSpawning;
+    [SerializeField] private bool spawnPointSet = false;
 
     [Header("States")]
     public bool IsPlaying = false; // Bool to determine if player is in menu or playing the game
@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public UnityAction OnRoomClear;
     // Subbed at: InGameHUD.cs
     public UnityAction OnHostageRescued;
+    // Subbed at: DungeonGnereator.cs
+    public UnityAction<float> OnSceneChange;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -54,8 +56,6 @@ public class GameManager : MonoBehaviour
             // If there is one, also add the player to camera's target group
             SetVcamTargetGroup(ActivePlayer);
         }
-
-        StartGame();
     }
 
     // Get singleton instance
@@ -159,5 +159,9 @@ public class GameManager : MonoBehaviour
     public void GameOver(GameObject killer)
     {
         OnGameOver?.Invoke(killer);
+    }
+    public void SceneChange(float delay)
+    {
+        OnSceneChange?.Invoke(delay);
     }
 }
