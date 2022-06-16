@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     // Subbed at: 
     public UnityAction OnLevelComplete;
     // Subbed at: InGameHUD.cs
+    public UnityAction<GameObject> OnGameOver;
+    // Subbed at: InGameHUD.cs
     public UnityAction OnRoomClear;
     // Subbed at: InGameHUD.cs
     public UnityAction OnHostageRescued;
@@ -77,11 +79,31 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         IsPlaying = true;
+        SetSpawn();
         SpawnPlayer(SpawnPoint);
     }
     public void CompleteLevel()
     {
         OnLevelComplete?.Invoke();
+    }
+
+    // Set Spawn
+    public void SetSpawn()
+    {
+        RoomState spawnRoom;
+        var rooms = FindObjectsOfType<RoomState>();
+
+        // Find the player spawn room
+        foreach (var room in rooms)
+        {
+            if (room.playerSpawnRoom)
+            {
+                // Set spawn point to the middle of that room
+                spawnRoom = room;
+                SpawnPoint.position = spawnRoom.transform.position;
+                break;
+            }
+        }
     }
 
     // Spawn player
@@ -133,5 +155,9 @@ public class GameManager : MonoBehaviour
     public void HostageRescued()
     {
         OnHostageRescued?.Invoke();
+    }
+    public void GameOver(GameObject killer)
+    {
+        OnGameOver?.Invoke(killer);
     }
 }
