@@ -55406,6 +55406,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413612330055652563, guid: e1ed0e1e9ee423c47b956b2487d46c46, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369535329451046175, guid: e1ed0e1e9ee423c47b956b2487d46c46, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5282297249656625098, guid: e1ed0e1e9ee423c47b956b2487d46c46, type: 3}
       propertyPath: m_Name
       value: Canvas HUD
@@ -55492,6 +55500,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5282297249656625102, guid: e1ed0e1e9ee423c47b956b2487d46c46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630709078059436604, guid: e1ed0e1e9ee423c47b956b2487d46c46, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

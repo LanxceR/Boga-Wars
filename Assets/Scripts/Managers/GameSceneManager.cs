@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public enum SceneName
 {
+    MAIN_MENU,
     STAGE_ONE,
     TEST_LEVEL_D,
     TEST_LEVEL_B
@@ -15,7 +16,7 @@ public class GameSceneManager : MonoBehaviour
     private static GameSceneManager instance;
 
     [SerializeField] private Animator animator;
-    [SerializeField] private SceneName defaultSceneTarget;
+    [SerializeField] private string defaultSceneTarget;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -75,7 +76,8 @@ public class GameSceneManager : MonoBehaviour
         // Reset Timescale now (IMPORTANT: Coroutines wont run if timescale = 0)
         Time.timeScale = 1f;
 
-        GameManager.GetInstance().SceneChange(delay);
+        if (GameManager.GetInstance())
+            GameManager.GetInstance().SceneChange(delay);
 
         yield return new WaitForSeconds(delay);
 
@@ -91,7 +93,8 @@ public class GameSceneManager : MonoBehaviour
         // Reset Timescale now (IMPORTANT: Coroutines wont run if timescale = 0)
         Time.timeScale = 1f;
 
-        GameManager.GetInstance().SceneChange(delay);
+        if (GameManager.GetInstance())
+            GameManager.GetInstance().SceneChange(delay);
 
         yield return new WaitForSeconds(delay);
 
