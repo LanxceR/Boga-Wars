@@ -70,6 +70,22 @@ public class RoomController : MonoBehaviour
         loadedRooms.Add(loadedRoom);
     }
 
+    public void DestroyAllRooms(float delay)
+    {
+        StartCoroutine(DestroyAllRoomsCoroutine(delay));
+    }
+    private IEnumerator DestroyAllRoomsCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        foreach (RoomState room in loadedRooms)
+        {
+            Destroy(room.gameObject);
+        }
+
+        loadedRooms.Clear();
+    }
+
     public string SetRoomName(RoomState room)
     {
         string prefix = "";

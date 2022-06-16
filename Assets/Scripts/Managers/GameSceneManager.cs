@@ -75,6 +75,8 @@ public class GameSceneManager : MonoBehaviour
         // Reset Timescale now (IMPORTANT: Coroutines wont run if timescale = 0)
         Time.timeScale = 1f;
 
+        GameManager.GetInstance().SceneChange(delay);
+
         yield return new WaitForSeconds(delay);
 
         // Animation
@@ -89,6 +91,8 @@ public class GameSceneManager : MonoBehaviour
         // Reset Timescale now (IMPORTANT: Coroutines wont run if timescale = 0)
         Time.timeScale = 1f;
 
+        GameManager.GetInstance().SceneChange(delay);
+
         yield return new WaitForSeconds(delay);
 
         // Animation
@@ -96,7 +100,6 @@ public class GameSceneManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         SceneManager.LoadSceneAsync(scene);
-
     }
 
     // Get current scene

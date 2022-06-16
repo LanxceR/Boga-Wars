@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public UnityAction OnRoomClear;
     // Subbed at: InGameHUD.cs
     public UnityAction OnHostageRescued;
+    // Subbed at: DungeonGnereator.cs
+    public UnityAction<float> OnSceneChange;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -157,5 +159,9 @@ public class GameManager : MonoBehaviour
     public void GameOver(GameObject killer)
     {
         OnGameOver?.Invoke(killer);
+    }
+    public void SceneChange(float delay)
+    {
+        OnSceneChange?.Invoke(delay);
     }
 }

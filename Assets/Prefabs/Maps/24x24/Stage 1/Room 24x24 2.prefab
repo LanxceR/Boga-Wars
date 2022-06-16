@@ -15925,7 +15925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090298069968956521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -48, z: 0}
+  m_LocalPosition: {x: 24, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8241793915157230002}
@@ -15992,8 +15992,8 @@ MonoBehaviour:
   playerSpawnRoom: 0
   exitRoom: 0
   hostageRoom: 0
-  idX: 0
-  idY: -2
+  idX: 1
+  idY: 0
   roomIsInCombat: 0
   roomHasBeenVisited: 0
   roomIsCleared: 0

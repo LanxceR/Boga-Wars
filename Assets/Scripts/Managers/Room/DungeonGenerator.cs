@@ -44,6 +44,9 @@ public class DungeonGenerator : MonoBehaviour
     // Start is called just before any of the Update methods is called the first time
     private void Start()
     {
+        // Subscribe methods to game manager
+        GameManager.GetInstance().OnSceneChange += FlushRooms;
+
         GameManager.GetInstance().StartGame();
     }
 
@@ -116,5 +119,15 @@ public class DungeonGenerator : MonoBehaviour
         }
 
         return posIsEmpty;
+    }
+
+    public void FlushRooms(float delay)
+    {
+        StartCoroutine(FlushRoomsCoroutine(delay));
+    }
+    private IEnumerator FlushRoomsCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        positionsVisited.Clear();
     }
 }
