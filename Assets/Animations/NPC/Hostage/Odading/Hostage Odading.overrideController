@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hostage Odading
+  m_Controller: {fileID: 9100000, guid: fedd3a951afddc64182cbb44c79b4972, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 577d590141b38f34a81384bf33ad49b1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 006835f93572f3d46a2afce1f2527d9d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9a1c58e8c584d194f8a751ad6a5a6b17, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9a27d2096bddff64c86adcc22beb9ad4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f7e7d48e9d504e64f8a88e4456111eb1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 879fe0858ec017040b6447d25fedfa4f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d8b790a9769bd0543b1a0bbf887da8ac, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d8ace9ff3ce36f34ba7d8e310937da09, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: deffcf186d9e5104688a8787627819ce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 11d6b0da82ebf124fa9ae62eaa80a020, type: 2}
