@@ -42,6 +42,14 @@ public class EnemyHolder : MonoBehaviour
     // Spawn Enemies
     public void Spawn()
     {
+        // Check if spawn area is set or not
+        // IMPORTANT: this is to prevent not setting up spawn area leading to infinite loop when spawning
+        if (spawnArea.bounds.size.magnitude <= 0)
+        {
+            Debug.LogError("Spawn Area is not set!");
+            return;
+        }
+
         // Call Spawner to spawn enemies and store in this gameobject
         enemyObjects = Spawner.GetInstance().SpawnEnemies(amountToSpawn, randomizeSpawnAmount, spawnArea, transform, enemyTypes);
         UpdateEnemyList();

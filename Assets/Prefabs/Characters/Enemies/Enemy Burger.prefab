@@ -291,6 +291,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  lastHitBy: {fileID: 0}
 --- !u!114 &7774728846420634254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +385,7 @@ MonoBehaviour:
   fireRateDelay: 5
   damage: 1
   range: 10
-  velocity: 5.5
+  velocity: 4.5
   knockbackForce: 10
   spread: 5
   isBurstFire: 1

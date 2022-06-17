@@ -68,8 +68,8 @@ public class RoomController : MonoBehaviour
     {
         RoomState loadedRoom = Instantiate(room, transform);
 
-        loadedRoom.name = SetRoomName(loadedRoom);
         loadedRoom.transform.localPosition = new Vector3(x * room.width, y * room.height);
+        loadedRoom.name = SetRoomName(loadedRoom);
         loadedRoom.idX = x;
         loadedRoom.idY = y;
 

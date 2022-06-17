@@ -14,23 +14,7 @@ public class UIFade : MonoBehaviour
 
     public void DoFadeOut(float duration)
     {
-        StartCoroutine(FadeOut(duration));
-    }
-    private IEnumerator FadeOut(float duration)
-    {
-        Vector3 originalPos = transform.localPosition;
-
-        float elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            this.canvasGroup.alpha = Mathf.Lerp(1, 0, elapsed / duration);
-
-            yield return null;
-        }
-
-        this.canvasGroup.alpha = 0f;
+        StartCoroutine(FadeOut(duration, 0f));
     }
     public void DoFadeOut(float duration, float delay)
     {
@@ -38,15 +22,13 @@ public class UIFade : MonoBehaviour
     }
     private IEnumerator FadeOut(float duration, float delay)
     {
-        Vector3 originalPos = transform.localPosition;
-
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
 
         float elapsed = 0f;
 
         while (elapsed < duration)
         {
-            elapsed += Time.deltaTime;
+            elapsed += Time.fixedUnscaledDeltaTime;
             SetAlpha(Mathf.Lerp(1, 0, elapsed / duration));
 
             yield return null;
@@ -67,7 +49,7 @@ public class UIFade : MonoBehaviour
 
         while (elapsed < duration)
         {
-            elapsed += Time.deltaTime;
+            elapsed += Time.fixedUnscaledDeltaTime;
             SetAlpha(Mathf.Lerp(0, 1, elapsed / duration));
 
             yield return null;
@@ -82,14 +64,14 @@ public class UIFade : MonoBehaviour
     }
     private IEnumerator Blink(int blinkAmount, float blinkInterval, float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
 
         for (int i = 0; i < blinkAmount; i++)
         {
             SetAlpha(0f);
-            yield return new WaitForSeconds(blinkInterval/2);
+            yield return new WaitForSecondsRealtime(blinkInterval/2);
             SetAlpha(1f);
-            yield return new WaitForSeconds(blinkInterval/2);
+            yield return new WaitForSecondsRealtime(blinkInterval/2);
         }
     }
 }

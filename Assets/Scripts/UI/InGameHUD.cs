@@ -80,7 +80,7 @@ public class InGameHUD : MonoBehaviour
         if (successTextFade)
         {
             successTextFade.SetAlpha(1f);
-            successTextFade.DoBlink(3, 0.5f, 0.25f);
+            successTextFade.DoBlink(5, 0.2f, 0.25f);
             successTextFade.DoFadeOut(1f, 5f);
         }
     }

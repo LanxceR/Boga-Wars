@@ -25,6 +25,8 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.GetInstance().IsPlaying) return;
+
         UpdateAnimationState();
 
         UpdateAnimationDirection();

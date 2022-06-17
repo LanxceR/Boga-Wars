@@ -12,7 +12,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private SpriteRenderer[] spriteRenderers;
 
     [Header("Health")]
-    [SerializeField] private float maxHealth;
+    public float maxHealth;
     public float currentHealth;
     [SerializeField] private Color deadColor;
 

@@ -20,6 +20,8 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.GetInstance().IsPlaying) return;
+
         // Translate screen position to world position
         Ray ray = Camera.main.ScreenPointToRay(mousePosition);
         Vector2 worldPos = ray.GetPoint(0.5f);
@@ -48,6 +50,8 @@ public class FollowMouse : MonoBehaviour
     // OnLook listener from InputAction "PlayerInput.inputaction"
     void OnLook(InputValue mousePos)
     {
+        if (!GameManager.GetInstance().IsPlaying) return;
+
         // Get mouse position on screen
         mousePosition = mousePos.Get<Vector2>();
     }

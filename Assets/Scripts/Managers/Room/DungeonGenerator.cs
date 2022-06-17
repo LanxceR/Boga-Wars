@@ -39,14 +39,14 @@ public class DungeonGenerator : MonoBehaviour
     {
         dungeonRooms = GenerateDungeon(numberOfCrawlers, roomsMin, roomsMax);
         SpawnRooms(dungeonRooms, startRoomPrefabs, roomPrefabs, finishRoomPrefabs);
+
+        // Subscribe methods to game manager
+        GameManager.GetInstance().OnSceneChange += FlushRooms;
     }
 
     // Start is called just before any of the Update methods is called the first time
     private void Start()
     {
-        // Subscribe methods to game manager
-        GameManager.GetInstance().OnSceneChange += FlushRooms;
-
         GameManager.GetInstance().StartGame();
     }
 

@@ -67,7 +67,7 @@ MonoBehaviour:
   fireRateDelay: 3
   damage: 1
   range: 10
-  velocity: 5.5
+  velocity: 5
   knockbackForce: 10
   spread: 0
   isBurstFire: 0
@@ -368,6 +368,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  lastHitBy: {fileID: 0}
 --- !u!114 &7482595399496530616
 MonoBehaviour:
   m_ObjectHideFlags: 0

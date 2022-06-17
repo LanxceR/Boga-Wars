@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     // OnMove listener from InputAction "PlayerInput.inputaction"
     void OnMove(InputValue moveValue)
     {
+        if (!GameManager.GetInstance().IsPlaying) return;
+
         // Get input value
         Vector2 moveVector = moveValue.Get<Vector2>();
 

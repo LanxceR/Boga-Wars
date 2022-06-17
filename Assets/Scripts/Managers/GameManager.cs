@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,12 +24,10 @@ public class GameManager : MonoBehaviour
     [Header("States")]
     public bool IsPlaying = false; // Bool to determine if player is in menu or playing the game
 
-    // Subbed at: 
+    // Subbed at: InGameMenuUI.cs
     public UnityAction OnPauseAction;
-    // Subbed at: 
+    // Subbed at: InGameMenuUI.cs
     public UnityAction OnResumeAction;
-    // Subbed at: 
-    public UnityAction OnLevelComplete;
     // Subbed at: InGameHUD.cs
     public UnityAction<GameObject> OnGameOver;
     // Subbed at: InGameHUD.cs
@@ -82,10 +81,6 @@ public class GameManager : MonoBehaviour
         SetSpawn();
         SpawnPlayer(SpawnPoint);
     }
-    public void CompleteLevel()
-    {
-        OnLevelComplete?.Invoke();
-    }
 
     // Set Spawn
     public void SetSpawn()
@@ -127,6 +122,14 @@ public class GameManager : MonoBehaviour
                 behaviour.enabled = true;
             }
         }
+
+        // Find a player object if there's already one in scene from the start
+        RoomState[] rooms = FindObjectsOfType<RoomState>();
+        foreach (var room in rooms)
+        {
+            // Visit all room once at start to detect where the player is at the start of the game
+            room.VisitRoom();
+        }
     }
 
     private void FindPlayer()
@@ -148,6 +151,38 @@ public class GameManager : MonoBehaviour
         GameVcamTargetGroup.AddMember(aimHelper.transform, 0.30f, 0f);
     }
 
+    // OnCancel listener from InputAction "PlayerInput.inputaction"
+    // Mapped in UI
+    void OnCancel(InputValue moveValue)
+    {
+        PauseAndResumeGame();
+    }
+
+    public void PauseGame()
+    {
+        IsPlaying = false;
+        Time.timeScale = 0f;
+        OnPauseAction?.Invoke();
+    }
+    public void ResumeGame()
+    {
+        IsPlaying = true;
+        Time.timeScale = 1f;
+        OnResumeAction?.Invoke();
+    }
+    public void PauseAndResumeGame()
+    {
+        if (IsPlaying)
+        {
+            // Pause the game
+            PauseGame();
+        }
+        else
+        {
+            // Resume the game
+            ResumeGame();
+        }
+    }
     public void RoomClear()
     {
         OnRoomClear?.Invoke();

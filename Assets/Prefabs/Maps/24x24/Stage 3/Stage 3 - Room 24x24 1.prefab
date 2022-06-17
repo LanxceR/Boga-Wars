@@ -1548,7 +1548,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8737936585784098498}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -18091,7 +18091,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18302,14 +18302,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 9
     m_Data: {fileID: 8375225371968795766, guid: 89b2a15fc04df8d4185a711d6dae317e, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -5087453308758236008, guid: 89b2a15fc04df8d4185a711d6dae317e, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 50
     m_Data:
@@ -18470,17 +18470,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToSpawn: 0
-  randomizeSpawnAmount: 0
-  reinforcements: 0
-  randomizeReinforcements: 0
+  amountToSpawn: 4
+  randomizeSpawnAmount: 1
+  reinforcements: 2
+  randomizeReinforcements: 1
   spawnArea: {fileID: 7920542259182946933}
   enemyTypes:
-  - Rate: 50
+  - Rate: 40
     Prefab: {fileID: 2165669676148542269, guid: 8ee2a3de601815b4b815c790b65610a6, type: 3}
-  - Rate: 30
+  - Rate: 35
     Prefab: {fileID: 7482595399496530614, guid: 403156421b631604597a1e98ba31fd95, type: 3}
-  - Rate: 20
+  - Rate: 25
     Prefab: {fileID: 7774728846420634240, guid: 917896f3093752b489d31c83c518a3de, type: 3}
   enemyList: []
 --- !u!114 &8737936585784098498
@@ -18498,6 +18498,8 @@ MonoBehaviour:
   playerSpawnRoom: 0
   exitRoom: 0
   hostageRoom: 0
+  idX: 0
+  idY: 0
   roomIsInCombat: 0
   roomHasBeenVisited: 0
   roomIsCleared: 0
@@ -18505,6 +18507,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  width: 24
+  height: 24
   entranceWalls:
   - {fileID: 2688838375856819259}
   - {fileID: 4365960522128803607}
@@ -18514,7 +18518,7 @@ MonoBehaviour:
   - {fileID: 3409059000938340898}
   - {fileID: 5281948798757002013}
   - {fileID: 5124196946194749515}
-  - {fileID: 0}
+  - {fileID: 1262391612747944901}
 --- !u!1 &7881040689234152455
 GameObject:
   m_ObjectHideFlags: 0
@@ -20203,9 +20207,9 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 2573359c6b4d76f48abc539a8d06522c, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: e9715dd17db72bb4a95281f3d0f99d0e, type: 2}
+    m_Data: {fileID: 11400000, guid: f8cbc5ab22c8dd844bf8205a5127c6f9, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: bc7abf00c5c334444bdd5dbe53771342, type: 2}
+    m_Data: {fileID: 11400000, guid: 66fc9f28013ad3a489de6b4865dfbd1b, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: aa1a8ee8da14ccd47b6b965a455c01de, type: 2}
   - m_RefCount: 10
@@ -20238,9 +20242,9 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1513585863644614120, guid: 89b2a15fc04df8d4185a711d6dae317e, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 833e74bf9e3f8e9448b7bf8c5c04dd46, type: 3}
+    m_Data: {fileID: 21300000, guid: 1efd7f5b94280864a9f769b92b3e8abd, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: a4c019db5c6ef824db66aef961719057, type: 3}
+    m_Data: {fileID: 21300000, guid: ec61eb218e1ec4a47ab05ed90bb5a0f2, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 7023220323323671548, guid: 89b2a15fc04df8d4185a711d6dae317e, type: 3}
   m_TileMatrixArray:
