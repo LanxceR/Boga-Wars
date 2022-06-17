@@ -23,6 +23,8 @@ public class HostageState : MonoBehaviour
     {
         if (!hasBeenRescued)
         {
+            // Play sfx
+            AudioManager.GetInstance().PlayFanfareSfx();
             GameManager.GetInstance().HostageRescued();
             GameSceneManager.GetInstance().GotoSceneWithDelay(5f);
             hasBeenRescued = true;

@@ -101,25 +101,35 @@ public class InGameMenuUI : MonoBehaviour
         }
     }
 
+    public void ButtonPressed()
+    {
+        AudioManager.GetInstance().PlayButtonClickSfx();
+    }
+
     public void ResumeButton()
     {
+        ButtonPressed();
         ResumeGame();
         GameManager.GetInstance().ResumeGame();
     }
     public void RedoStageButton()
     {
+        ButtonPressed();
         GameSceneManager.GetInstance().ReloadScene();
     }
     public void RestartButton()
     {
+        ButtonPressed();
         GameSceneManager.GetInstance().GotoScene(SceneName.STAGE_ONE);
     }
     public void ReturnToMenuButton()
     {
+        ButtonPressed();
         GameSceneManager.GetInstance().GotoScene(SceneName.MAIN_MENU);
     }
     public void QuitButton()
     {
+        ButtonPressed();
         Application.Quit();
     }
 }

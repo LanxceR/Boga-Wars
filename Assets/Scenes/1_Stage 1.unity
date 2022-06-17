@@ -22149,6 +22149,7 @@ MonoBehaviour:
   burstDelay: 0.03
   startingAmmo: Infinity
   projectileType: 0
+  shootSfx: {fileID: 0}
   muzzles: []
   drawGizmo: 0
 --- !u!1 &1028998727

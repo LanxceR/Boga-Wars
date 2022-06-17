@@ -72,6 +72,8 @@ public class EnemyHolder : MonoBehaviour
             }
             else 
             {
+                // Play sfx
+                AudioManager.GetInstance().PlayRoomClear();
                 roomState.ClearRoom();
 
                 // Invoke UnityAction OnRoomClear in GameManager
