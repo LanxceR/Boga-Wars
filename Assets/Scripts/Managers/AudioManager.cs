@@ -46,18 +46,13 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        ChangeMusic("Track 1");
     }
 
     // Get singleton instance
     public static AudioManager GetInstance()
     {
         return instance;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        ChangeMusic("Track 1");
     }
 
     // Update is called once per frame

@@ -33,7 +33,10 @@ public class GameSceneManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
+    private void Start()
+    {
         AudioManager.GetInstance().ChangeMusic(musicTheme);
     }
 
