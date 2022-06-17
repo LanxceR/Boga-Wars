@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2c47be01bd72941a6f80589861da36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToSpawn: 0
-  randomizeSpawnAmount: 0
-  reinforcements: 0
-  randomizeReinforcements: 0
+  amountToSpawn: 4
+  randomizeSpawnAmount: 1
+  reinforcements: 1
+  randomizeReinforcements: 1
   spawnArea: {fileID: 6117836839649751444}
   enemyTypes:
   - Rate: 50
@@ -128,6 +128,8 @@ MonoBehaviour:
   playerSpawnRoom: 0
   exitRoom: 0
   hostageRoom: 0
+  idX: 0
+  idY: 0
   roomIsInCombat: 0
   roomHasBeenVisited: 0
   roomIsCleared: 0
@@ -135,6 +137,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  width: 24
+  height: 24
   entranceWalls:
   - {fileID: 6117836840016546684}
   - {fileID: 6117836839136211147}

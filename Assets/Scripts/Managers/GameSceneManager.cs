@@ -7,6 +7,8 @@ public enum SceneName
 {
     MAIN_MENU,
     STAGE_ONE,
+    STAGE_TWO,
+    STAGE_THREE,
     TEST_LEVEL_D,
     TEST_LEVEL_B
 }

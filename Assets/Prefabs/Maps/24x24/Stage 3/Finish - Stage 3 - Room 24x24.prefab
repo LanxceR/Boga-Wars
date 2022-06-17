@@ -917,6 +917,8 @@ MonoBehaviour:
   playerSpawnRoom: 0
   exitRoom: 1
   hostageRoom: 1
+  idX: 0
+  idY: 0
   roomIsInCombat: 0
   roomHasBeenVisited: 0
   roomIsCleared: 0
@@ -924,6 +926,8 @@ MonoBehaviour:
   actorLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  width: 24
+  height: 24
   entranceWalls:
   - {fileID: 7082629094486831711}
   - {fileID: 7016393390192520858}
@@ -12480,7 +12484,7 @@ Tilemap:
   - first: {x: -7, y: 6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 11
+      m_TileIndex: 12
       m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -12590,7 +12594,7 @@ Tilemap:
   - first: {x: 6, y: 6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 12
+      m_TileIndex: 13
       m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
@@ -12721,12 +12725,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: f9066b0388a052741a18a20c2190a57f, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 5c1578f10e8f02c46b735f164a24df63, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 66fc9f28013ad3a489de6b4865dfbd1b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: f8cbc5ab22c8dd844bf8205a5127c6f9, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: 27c57c783141fdb40b8192441bd6182d, type: 2}
   m_TileSpriteArray:
@@ -12757,9 +12761,9 @@ Tilemap:
   - m_RefCount: 19
     m_Data: {fileID: 2316820614975044560, guid: 89b2a15fc04df8d4185a711d6dae317e, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1935960902812520208, guid: cdeb45b55f4a7994b991c3df90c0337e, type: 3}
+    m_Data: {fileID: 21300000, guid: 1efd7f5b94280864a9f769b92b3e8abd, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -5619363968347466706, guid: cdeb45b55f4a7994b991c3df90c0337e, type: 3}
+    m_Data: {fileID: 21300000, guid: ec61eb218e1ec4a47ab05ed90bb5a0f2, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 84
     m_Data:
