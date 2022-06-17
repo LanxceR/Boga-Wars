@@ -205,8 +205,8 @@ CanvasGroup:
   m_GameObject: {fileID: 2075726697}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &5985981410887485568
 GameObject:
@@ -253,4 +253,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 250413534}
-  defaultScene: 2
+  defaultSceneTarget: 1_Stage 1
