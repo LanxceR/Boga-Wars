@@ -34,6 +34,9 @@ public class HealthSystem : MonoBehaviour
     public UnityEvent OnHit;
     public UnityEvent OnHealthReachZero;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource hitSfx;
+
     [Header("Misc")]
     public GameObject lastHitBy;
 
@@ -68,6 +71,25 @@ public class HealthSystem : MonoBehaviour
 
         // Deduct current health by damage, but not exceeding 0
         currentHealth = currentHealth - damage < 0 ? 0 : currentHealth - damage;
+
+        if (hitSfx)
+        {
+            // Play sfx
+            hitSfx.Play();
+        }
+        else
+        {
+            if (transform.root.CompareTag("Player"))
+            {
+                // Play sfx
+                AudioManager.GetInstance().PlayPlayerHit();
+            }
+            else
+            {
+                // Play sfx
+                AudioManager.GetInstance().PlayEnemyHit();
+            }
+        }
 
         if (currentHealth > 0)
         {

@@ -65,3 +65,52 @@ MonoBehaviour:
     Type: 0
     Loop: 1
     Source: {fileID: 0}
+  - Name: Player Shoot
+    AudioClip: {fileID: 8300000, guid: b4d134a193e9be344b67b5c8c6f5a54a, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Enemy Shoot
+    AudioClip: {fileID: 8300000, guid: 572fda14f0e79e245aed2112502a5b4c, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Player Hit
+    AudioClip: {fileID: 8300000, guid: f2595b4fbee4ad24089fc4d475211fc4, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Enemy Hit
+    AudioClip: {fileID: 8300000, guid: b91ecd4be641f73459d5935175dd602c, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Room Clear
+    AudioClip: {fileID: 8300000, guid: 6b6cc15ee05baf64892ee25f84d8946b, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Button Click
+    AudioClip: {fileID: 8300000, guid: 563ede00fe8be7e4391427abaf5be59c, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}
+  - Name: Fanfare
+    AudioClip: {fileID: 8300000, guid: e06b79346778bba46b72b387af9be275, type: 3}
+    Volume: 0.3
+    Pitch: 1
+    Type: 1
+    Loop: 0
+    Source: {fileID: 0}

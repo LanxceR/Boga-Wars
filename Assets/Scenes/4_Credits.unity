@@ -501,6 +501,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f57a6aafd4b07d49b7b797080385fd5, type: 3}
+--- !u!114 &288771254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5043422965237839169, guid: 5f57a6aafd4b07d49b7b797080385fd5, type: 3}
+  m_PrefabInstance: {fileID: 288771253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8643ca477fecf0c4d9eb4b959410f330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &531330286
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +682,18 @@ MonoBehaviour:
           m_StringArgument: 0_Main Menu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 288771254}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClickSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &652491285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000063472005, y: -1769.3972}
+  m_AnchoredPosition: {x: 0.000063472005, y: -1769.4197}
   m_SizeDelta: {x: 985.538, y: 4618.237}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1001196553
@@ -946,7 +969,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 531330287}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.23373479
+  m_Size: 0.23372507
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

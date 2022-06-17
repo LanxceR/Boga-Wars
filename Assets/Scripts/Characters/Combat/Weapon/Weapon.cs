@@ -29,6 +29,9 @@ public class Weapon : MonoBehaviour
     [Header("Prefab Type")]
     [SerializeField] private PoolObjectType projectileType; //Type of projectile to fire
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource shootSfx;
+
     [Header("Muzzles / Fire Positions")]
     [SerializeField] private List<WeaponMuzzle> muzzles;
 
@@ -98,6 +101,25 @@ public class Weapon : MonoBehaviour
     {
         if (cooldown <= 0f && Ammo > 0)
         {
+            if (shootSfx)
+            {
+                // Play sfx
+                shootSfx.Play();
+            }
+            else
+            {
+                if (transform.root.CompareTag("Player"))
+                {
+                    // Play sfx
+                    AudioManager.GetInstance().PlayPlayerShoot();
+                }
+                else
+                {
+                    // Play sfx
+                    AudioManager.GetInstance().PlayEnemyShoot();
+                }
+            }
+
             StartCoroutine(ShootCoroutine());
 
             //Set Cooldown

@@ -55,10 +55,44 @@ public class AudioManager : MonoBehaviour
         return instance;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayAudio(string name)
     {
-        
+        Sound sound = Array.Find(sounds, sound => sound.Name == name);
+        sound.Source.Play();
+    }
+    public void StopAudio(string name)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.Name == name);
+        sound.Source.Stop();
+    }
+
+    public void PlayPlayerShoot()
+    {
+        PlayAudio("Player Shoot");
+    }
+    public void PlayEnemyShoot()
+    {
+        PlayAudio("Enemy Shoot");
+    }
+    public void PlayPlayerHit()
+    {
+        PlayAudio("Player Hit");
+    }
+    public void PlayEnemyHit()
+    {
+        PlayAudio("Enemy Hit");
+    }
+    public void PlayRoomClear()
+    {
+        PlayAudio("Room Clear");
+    }
+    public void PlayButtonClickSfx()
+    {
+        PlayAudio("Button Click");
+    }
+    public void PlayFanfareSfx()
+    {
+        PlayAudio("Fanfare");
     }
 
     public void ChangeMusic(string name)

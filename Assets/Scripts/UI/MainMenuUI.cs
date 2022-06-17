@@ -9,11 +9,12 @@ public class MainMenuUI : MonoBehaviour
 
     public void ButtonPressed()
     {
-
+        AudioManager.GetInstance().PlayButtonClickSfx();
     }
 
     public void QuitButton()
     {
+        ButtonPressed();
         Application.Quit();
     }
 }
