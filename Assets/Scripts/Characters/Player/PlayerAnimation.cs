@@ -4,34 +4,47 @@ using UnityEngine;
 
 public enum PlayerState
 {
-    IDLE, RUN
+    IDLE, RUN, DEAD
 }
+[RequireComponent(typeof(Animator))]
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
-    private LookAtMouse weapon;
-    private PlayerMovement playerMove;
+
+    [Header("Components")]
+    [SerializeField] private LookAtMouse mouseLook;
+    [SerializeField] private PlayerMovement playerMove;
+    [SerializeField] private HealthSystem health;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-
-        playerMove = GetComponent<PlayerMovement>();
-        weapon = GetComponentInChildren<LookAtMouse>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.GetInstance().IsPlaying) return;
+
         UpdateAnimationState();
 
-        if (weapon)
-        {
-            Vector2 weaponRotation = weapon.transform.up;
+        UpdateAnimationDirection();
+    }
 
-            anim.SetFloat("DirX", weaponRotation.x);
-            anim.SetFloat("DirY", weaponRotation.y);
+    public void TriggerHurt()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+    private void UpdateAnimationDirection()
+    {
+        if (mouseLook)
+        {
+            Vector2 lookDirection = mouseLook.transform.up;
+
+            anim.SetFloat("DirX", lookDirection.x);
+            anim.SetFloat("DirY", lookDirection.y);
         }
         else
         {
@@ -44,11 +57,15 @@ public class PlayerAnimation : MonoBehaviour
         PlayerState state;
 
 
-        if (playerMove.MoveX != 0 || playerMove.MoveY != 0)
+        if (health.isDead)
+        {
+            state = PlayerState.DEAD;
+        }
+        else if (playerMove.MoveX != 0 || playerMove.MoveY != 0)
         {
             state = PlayerState.RUN;
         }
-        else
+        else 
         {
             state = PlayerState.IDLE;
         }

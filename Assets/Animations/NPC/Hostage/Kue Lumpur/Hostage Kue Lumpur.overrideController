@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hostage Kue Lumpur
+  m_Controller: {fileID: 9100000, guid: fedd3a951afddc64182cbb44c79b4972, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 577d590141b38f34a81384bf33ad49b1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 577d590141b38f34a81384bf33ad49b1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9a1c58e8c584d194f8a751ad6a5a6b17, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9a1c58e8c584d194f8a751ad6a5a6b17, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f7e7d48e9d504e64f8a88e4456111eb1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f7e7d48e9d504e64f8a88e4456111eb1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d8b790a9769bd0543b1a0bbf887da8ac, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d8b790a9769bd0543b1a0bbf887da8ac, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: deffcf186d9e5104688a8787627819ce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: deffcf186d9e5104688a8787627819ce, type: 2}
