@@ -7536,7 +7536,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6646777269954956354}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1

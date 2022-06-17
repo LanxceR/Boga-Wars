@@ -6283,7 +6283,7 @@ MonoBehaviour:
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5636653725588254568}
         m_TargetAssemblyTypeName: RoomState, Assembly-CSharp
         m_MethodName: VisitRoom
         m_Mode: 1
@@ -10189,7 +10189,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -10199,7 +10199,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_TileObjectToInstantiateIndex: 65535
@@ -12740,10 +12740,10 @@ Tilemap:
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: e318e0cd2ef6637498ed6f8167d7ff4a, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 4566270171627488556, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4003983557527114819, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: -842389914215094499, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
   - m_RefCount: 3
@@ -12762,8 +12762,8 @@ Tilemap:
     m_Data: {fileID: -2124103745326900243, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 3207343662143151631, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -4003983557527114819, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 186600124057276549, guid: 24d1a7f4cc5fd204594cd30e53bcb73c, type: 3}
   - m_RefCount: 5
