@@ -20,6 +20,7 @@ public class GameSceneManager : MonoBehaviour
 
     [SerializeField] private Animator animator;
     [SerializeField] private string defaultSceneTarget;
+    [SerializeField] private MusicTrack musicTheme;
 
     // Awake is called when the script instance is being loaded
     private void Awake()
@@ -32,6 +33,8 @@ public class GameSceneManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        AudioManager.GetInstance().ChangeMusic(musicTheme);
     }
 
     public static GameSceneManager GetInstance()
