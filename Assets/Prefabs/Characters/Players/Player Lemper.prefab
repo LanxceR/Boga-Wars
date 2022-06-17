@@ -246,7 +246,7 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 1498463199456695932}
   - {fileID: 1498463199104737998}
-  maxHealth: 6
+  maxHealth: 16
   currentHealth: 0
   deadColor: {r: 1, g: 1, b: 1, a: 1}
   isInvincible: 0
@@ -314,6 +314,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  lastHitBy: {fileID: 0}
 --- !u!1 &1498463199104737996
 GameObject:
   m_ObjectHideFlags: 0

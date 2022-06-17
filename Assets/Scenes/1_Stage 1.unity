@@ -75699,7 +75699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5985981410887485582, guid: 07dfe21c6dc962d4098b7e9ac0536d63, type: 3}
       propertyPath: defaultSceneTarget
-      value: 1_Stage 2
+      value: 2_Stage 2
       objectReference: {fileID: 0}
     - target: {fileID: 5985981410887485583, guid: 07dfe21c6dc962d4098b7e9ac0536d63, type: 3}
       propertyPath: m_RootOrder

@@ -122,6 +122,14 @@ public class GameManager : MonoBehaviour
                 behaviour.enabled = true;
             }
         }
+
+        // Find a player object if there's already one in scene from the start
+        RoomState[] rooms = FindObjectsOfType<RoomState>();
+        foreach (var room in rooms)
+        {
+            // Visit all room once at start to detect where the player is at the start of the game
+            room.VisitRoom();
+        }
     }
 
     private void FindPlayer()

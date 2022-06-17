@@ -16,9 +16,6 @@ public class UIHealthBar : MonoBehaviour
     {
         // Fetch playerHealth
         StartCoroutine(FetchPlayerHealth());
-
-        // Call init method
-        InitializeHealthbar();
     }
 
     // Update is called once per frame
@@ -46,7 +43,7 @@ public class UIHealthBar : MonoBehaviour
         // Initialize max healthbar
         if (playerHealth)
         {
-            maxHealthBar.fillAmount = playerHealth.currentHealth / 20;
+            maxHealthBar.fillAmount = playerHealth.maxHealth / 20;
             Debug.Log("Max Healthbar UI initialized");
         }
     }
@@ -57,6 +54,7 @@ public class UIHealthBar : MonoBehaviour
         if (playerHealth)
         {
             // Update current health bar
+            maxHealthBar.fillAmount = playerHealth.maxHealth / 20;
             currentHealthBar.fillAmount = playerHealth.currentHealth / 20;
         }
         else

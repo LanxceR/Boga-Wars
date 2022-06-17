@@ -9,6 +9,7 @@ public enum SceneName
     STAGE_ONE,
     STAGE_TWO,
     STAGE_THREE,
+    CREDITS,
     TEST_LEVEL_D,
     TEST_LEVEL_B
 }

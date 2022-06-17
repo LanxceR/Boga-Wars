@@ -39,9 +39,6 @@ public class RoomState : MonoBehaviour
     void Start()
     {
         enemyHolder = GetComponent<EnemyHolder>();
-
-        // Visit all room once at start to detect where the player is at the start of the game
-        VisitRoom();
     }
 
     // Update is called once per frame
@@ -98,14 +95,14 @@ public class RoomState : MonoBehaviour
         foreach (GameObject door in entranceDoors)
         {
             door.GetComponent<Collider2D>().isTrigger = false;
+        }
 
-            List<DoorAnimation> doorAnims = GetComponents<DoorAnimation>().Concat(GetComponentsInChildren<DoorAnimation>()).ToList();
+        List<DoorAnimation> doorAnims = GetComponents<DoorAnimation>().Concat(GetComponentsInChildren<DoorAnimation>()).ToList();
 
-            if (doorAnims != null)
-            {
-                foreach (DoorAnimation doorAnim in doorAnims)
-                    doorAnim.CloseDoor();
-            }
+        if (doorAnims != null)
+        {
+            foreach (DoorAnimation doorAnim in doorAnims)
+                doorAnim.CloseDoor();
         }
     }
 
